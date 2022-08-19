@@ -1,4 +1,4 @@
 ML Coding
 - PyTorch
 - Tensorflow
-- MxNet
+- JAX
