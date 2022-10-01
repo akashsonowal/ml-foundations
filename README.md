@@ -15,13 +15,13 @@
 - Content-Based DL method
 
 ## Deep Learning 
-- Basics
-- CNN
+1. Basics
+2.  CNN
  - Foundations
  - Object Detection
  - Facial Recognition
  - Neural Style Transfer
-- Sequence Model
+3. Sequence Model
  - RNN
   - RNN Basic
   - LSTM
