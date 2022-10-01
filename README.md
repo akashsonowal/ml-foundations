@@ -1,5 +1,39 @@
 # ml-expert
 
+## Classical Machine Learning
+1. Supervised Learning (Regression and Classification)
+- Linear Regression
+- Multiple Linear Regression
+- Logistic Regression
+- Neural Network
+- Random Forest and XGBoost
+2. Unsupervised Learning
+- K-Means Clustering 
+- Anomaly Detection
+3. Recommender Systems
+- Collaborative Filtering
+- Content-Based DL method
+
+## Deep Learning 
+- Basics
+- CNN
+ - Foundations
+ - Object Detection
+ - Facial Recognition
+ - Neural Style Transfer
+- Sequence Model
+ - RNN
+  - RNN Basic
+  - LSTM
+  - GRU
+  - Bidirectional RNNs
+  - Applications: Named Entity Recognition, Neural Machine Translation
+ - Attention 
+  - Transformers
+  - NER
+  - QA
+
+
 Data and Applied Scientist Role at Meta, Apple, Amazon, Netflix, Google
 
 Technical Interviews
