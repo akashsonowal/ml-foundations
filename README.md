@@ -19,8 +19,14 @@
 ## Applied Machine Learning Science
 - Recommender Systems
 - Computer Vision
+  - Image Classification 
+  - Object Detection
+  - Image Segmentation
+  - Visual and Intepretation
 - Natural Language Processes
 - Forecasting
+- Image Generation
+  - Neural Style Transfer
 
 ## MLOps and Big Data
 - Engineering Stuffs for ML
