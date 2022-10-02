@@ -1,5 +1,29 @@
 # ml-expert
 
+## Coding
+- Python Programming, OOPs, Problem Solving (DSA), CS Fundamentals
+- Databases (Structured, Unstructed)
+- Python Developement, Tools, Cloud 
+- Tableu, Excel, PowerBI, R-programming
+
+## Probability & Statistics
+
+## Product Strategy & Business
+
+## Machine Learning
+- Supervised
+- Unsupervised
+- Self-Supervised
+- Reinforcement
+
+## Applied Machine Learning Science
+- Recommender Systems
+- Computer Vision
+- Natural Language Processes
+- Forecasting
+
+## MLOps and Big Data
+
 ## Classical Machine Learning
 1. Supervised Learning (Regression and Classification)
 - Linear Regression
