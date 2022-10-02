@@ -35,7 +35,7 @@
   - Question Answering
   - Chat-Bots
 - Forecasting
-- Single & Multi-Modal Generation 
+- Generation (Single & Multi-Modal Use-cases)
   - GANs for Data Augmentation & Privacy Preservation 
   - Image to Image Translation 
   - Neural Style Transfer
