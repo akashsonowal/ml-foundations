@@ -24,8 +24,19 @@
   - Image Segmentation
   - Visual and Intepretation
 - Natural Language Processes
+  - Maachine Translation
+  - Document Search
+  - Auto-Correct
+  - POS and HMM
+  - NER
+  - Siamese Networks
+  - Text Summarization
+  - Question Answering
+  - Chat-Bots
 - Forecasting
-- Image Generation
+- Single & Multi-Modal Generation 
+  - GANs for Data Augmentation & Privacy Preservation 
+  - Image to Image Translation 
   - Neural Style Transfer
 
 ## MLOps and Big Data
