@@ -24,7 +24,7 @@
   - Image Segmentation
   - Visual and Intepretation
 - Natural Language Processes
-  - Maachine Translation
+  - Machine Translation
   - Document Search
   - Auto-Correct
   - POS and HMM
