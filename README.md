@@ -1,6 +1,6 @@
 # ml-expert
 
-## Coding
+## Coding & Tools
 - Python Programming, OOPs, Problem Solving (DSA), CS Fundamentals
 - Databases (Structured, Unstructed)
 - Python Developement, Tools, Cloud 
