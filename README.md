@@ -17,6 +17,7 @@
 - Reinforcement
 
 ## Applied Machine Learning Science
+- Causal AI
 - Recommender Systems
 - Computer Vision
   - Image Classification 
