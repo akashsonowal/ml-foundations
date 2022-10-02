@@ -23,6 +23,16 @@
 - Forecasting
 
 ## MLOps and Big Data
+- Engineering Stuffs for ML
+- Hyperparameters
+
+
+
+
+
+
+
+=========================================================
 
 ## Classical Machine Learning
 1. Supervised Learning (Regression and Classification)
