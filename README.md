@@ -33,6 +33,12 @@
   - NER
   - QA
 
+## Natural Language Processing
+4. With Attention Models
+- Neural Machine Translation
+- Text Summarization
+- Question Answering
+- Chatbot
 
 Data and Applied Scientist Role at Meta, Apple, Amazon, Netflix, Google
 
