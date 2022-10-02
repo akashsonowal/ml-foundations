@@ -40,6 +40,7 @@
   - Neural Style Transfer
 
 ## MLOps and Big Data
+- ML Lifecycle
 - Engineering Stuffs for ML
 - Hyperparameters
 
