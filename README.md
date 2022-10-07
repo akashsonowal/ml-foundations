@@ -45,6 +45,14 @@
 - Engineering Stuffs for ML
 - Hyperparameters
 
+## Distributed ML
+- Training 
+- Serving
+
+## ML System Design
+- Batch
+- Real
+
 
 
 
