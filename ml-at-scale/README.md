@@ -56,3 +56,93 @@ even if a data center becomes unavailable.
   
 - Change Data Capture
 - Live Video
+
+2. Data Storage
+configure hdfs sink through kafka
+pass the address of name node or master node
+then run the connector
+
+you can see the name node and verify what are getting stored
+
+Notes:
+| Hard Disk Drive (HDD)
+Astorage device which operates by setting bits on a spinning magnetic disk. The capacity and the read/write performance of the HDD
+are the main characteristics to consider when using an HDD within a particular system.
+
+| Data Replication
+Astrategy used to mitigate the potential of data loss In the event of a system or component failure. In the most basic form, it involves
+writing Identical data to more than one device or location. More efficient techniques like erasure coding incorporate mathematics to
+recover lost data without referring to an explicit copy of the data
+
+| Hadoop Distributed File System (HDFS)
+An open-source Apache software product which provides a distributed storage framework.
+
+I Avro
+Arow-oriented data serializer provided by Apache.
+
+| Parquet
+A column-oriented data storage format provided by Apache.
+| Exactly-once Semantics §
+Guarantees that an object within a distributed system is processed exactly once. Other semantics include maybe, at-least-once, and at-
+most-once §
+
+3. Data Processing
+SSH into name node of hdfs cluster
+use AWS EMR to setup the processing cluster
+Jupyter notebook outisde of spark cluster also can interact with it and submit jobs in cluster. The tool to do that is livy.
+I Recommendation Carousel
+A component within a graphical or conversational user interface which presents recommendations to a user. This can include
+products, ads, and media content.
+| Central Processing Unit (CPU)
+A general purpose compute resource responsible for executing computer programs.
+| Seasonality
+The predictable changes of data throughout the calendar year.
+I Parallelization
+When two or more computer programs are executed at the same Instant across more than one processor.
+| Random Access Memory (RAM)
+A device on a computer which stores the data and machine code of a running computer program.
+| Apache Spark
+Asoftware interface which provides implicit parallelism and fault tolerance across a cluster of machines.
+| Apache YARN
+Asoftware product responsible for managing compute resources across a cluster of machines.
+| Elastic MapReduce (EMR) %
+An Amazon Web Services product which provides users access to a Hadoop cluster.
+| Jupyter Notebook
+A Project jupyter product which provides an interactive workspace to execute code.
+4. Process Orchestration
+The airflow dag defines how worker first ssh into name node of hadoop cluster. The worker trigger spark jobs.
+So we can say airflow automates the data processing pipelines.
+| Apache Airflow
+Aworkflow management system that provides users a way to author, schedule, and execute software.
+
+## Exploration
+Our jupyter notebook should have access to hdfs and spark clusters for compute. So we have explored the data and its applications to models.
+| Automated Machine Learning (Auto-ML)
+A strategy which automates the process of applying features and labels to a machine learning model. |
+| Data Governance
+The method of managing, using, and protecting an organization's data. 
+
+## Experimentation
+Once we are satisfied on offline evaluations during exploration, we want online evaluations with real users.
+1. Frequentist AB Testing
+- A/B Testing
+The process of providing two or more different experiences across two or more subgroups of a population. The goal is to measure the change in behavior of the subgroups upon receiving the respective experiences.
+
+- A/ATest
+An A/B test in which the experiences being tested are identical to one another. This is done in an effort to determine statistical validity of the A/B tool, the metric being monitored, and the analysis process being used.
+
+- User Agent
+An identifier used to describe the software application which a user is using to Interact with another software application. For instance,
+an HTTP request to a website typically includes the user agent so that the website knows how to render the webpage.
+
+- Session ID
+A unique identifier assigned to a user to keep track of a user's connected interactions. For instance, a session may include a user logging In, purchasing an item, and logging out. Here, the session ID would be used to reference the group of those three Interactions.
+This session ID can be stored in the user's Internet browser as a cookie.
+
+- Cookie
+A small piece of data stored by a browser which indicates stateful information for a particular website. For instance, a cookle can be
+stored in your browser after you log in to a website to indicate that you are logged In. This will stop subsequent pages from asking you
+to log In again.
+3. Bayesian AB Testing
+4. Multi Armed Bandit
+5. Impact Estimation
