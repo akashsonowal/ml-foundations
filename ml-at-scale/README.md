@@ -143,6 +143,51 @@ This session ID can be stored in the user's Internet browser as a cookie.
 A small piece of data stored by a browser which indicates stateful information for a particular website. For instance, a cookle can be
 stored in your browser after you log in to a website to indicate that you are logged In. This will stop subsequent pages from asking you
 to log In again.
+
+Frequentist approach uses p-value and confidence interval
 3. Bayesian AB Testing
-4. Multi Armed Bandit
-5. Impact Estimation
+Here we use prior knowledge.
+The posterior and prior of same distribution initially.
+In bayesian we sample from distribution and infer results with probability.
+Beta Distribution
+This distribution is used to model percentages and proportions such as click-through probabilities.
+5. Multi Armed Bandit
+| Multi-Armed Bandit (MAB)
+A process which provides a number of choices |
+
+7. Impact Estimation
+THis is determine if experiment is worth is pre-experiment and whether to launch post-experimentation
+3 Key Terms -
+| Shadow Test 3
+Running two or more versions of software In parallel while only surfacing the result of one of the experiences to the end user. Thisfs |
+done in an effort to gauge the differences between the software versions. 1
+| Sample Selection Bias
+The bias that occurs when sampling a population into one or more subgroups at random results in a systematic inclusion or exclusion
+of some data. §
+| Experiment Collision |
+The event where one experiment unintentionally influences the result of one or more separate experiments. §
+
+## Large Scale Training
+1. Basic Models (Random Forest, Boosted Trees, Matrix Factorization, Logistic Regression etc).
+Read parquet files from HDFS Node and then run experiments.
+| MLlib
+Alibrary provided by Apache Spark which provides Spark clusters access to machine learning algorithms and refated utiities. MLIIb |
+provides a Dataframe-based APl which Is unofficially referred to as Spark ML, §
+~ provides a Dataframe-based APl which is unofficially referred to as Spark ML
+2. Deep Learning Models
+For distributed DL we will use PyTorch or Tensorflow....or some more advanced tools like Horovod by Uber
+| Model Parallelism |
+Amachine learning model training strategy used to maximize the utilization of compute resources (CPUs/GPUS) In which the model Is 3
+distributed across two or more devices. 1
+| Data Parallelism
+Amachine learning model training strategy used to maximize the utilization of compute resources (CPUs/GPUS) In which the datais |
+distributed across two or more devices §
+| Graphics Processing Unit §
+A specialized device that has many cores, allowing it to perform many operations at a time. §
+GPUs are often used within deep learning to accelerate training of neural networks by taking advantage of their ability to perform 1
+many parallel computations.
+| Concurrency
+When two or computer programs share a single processor.
+3. Model Validation
+
+
