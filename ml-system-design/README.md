@@ -1,7 +1,7 @@
 # Machine Learning System Design
 
-Design a machine learning platform to support some arbitrary big tech company like Google or Amazon.
-![alt text](https://github.com/akashsonowal/ml-with-akash/blob/main/ml-system-design/assets/ml_platform.png)
+## Design a machine learning platform to support some arbitrary big tech company like Google or Amazon.
+![](https://github.com/akashsonowal/ml-with-akash/blob/main/ml-system-design/assets/ml_platform.png)
 
 Many systems design questions are intentionally left very vague and are literally given in the form of `Design Foobar`. It's your job to ask clarifying questions to better understand the system that you have to build.
 
