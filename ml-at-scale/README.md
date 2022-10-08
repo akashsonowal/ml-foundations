@@ -189,5 +189,12 @@ many parallel computations.
 | Concurrency
 When two or computer programs share a single processor.
 3. Model Validation
+Bayesian Optimization is good but it is not non-parallizable. In Bayesian Op, the prior keep changing with iterations.
 
+## Productionization
+This is the MLOps (Writing test to reduce error, versioning, tracking etc)
+
+## Hosting
+1. Data Hosting
+2. Model Hosting
 
