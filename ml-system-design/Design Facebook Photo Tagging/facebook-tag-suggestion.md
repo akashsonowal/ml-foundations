@@ -72,3 +72,7 @@ The HDFS cluster and underlying processing cluster(s)
 Assuming we have access to images, we'll need two roughly equal sized samples of labeled images. One sample where each image contains one or more faces and another sample where each image contains no faces. The images with faces in them should contain faces at different scales, contrasts, poses, and facial expressions. To start it should include frontal faces with no occlusions or illumination problems. We'll start with roughly 5000 samples of each image class, faces and no faces.
 
 To get the images labeled we'll need some annotation software which provides images and to a workforce so that the images can be labeled appropriately. The annotation software should provide examples of what frontal face images are and are not. This will provide labels for the images so that we can train a model which detects faces in images.
+
+### 3. Image Pre-processing
+
+This stage is relatively simple. We can start by standardizing the images. Here, that means finding the mean and standard deviation of all the pixel values across the entire training set. For each pixel of each image we will subtract the mean and divide by the standard deviation.
