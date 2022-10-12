@@ -1,5 +1,7 @@
 # ml-expert
 
+What exceptional work have I done in software, hardware or AI?
+
 ## Coding & Tools
 - Python Programming, OOPs, Problem Solving (DSA), CS Fundamentals
 - Databases (Structured, Unstructed)
