@@ -6,3 +6,13 @@ Many systems design questions are intentionally left very vague and are literall
 We've laid out some of these questions below; their answers should give you some guidance on the problem. Before looking at them, we encourage you to take few minutes to think about what questions you'd ask in a real interview.
 
 Clarifying Questions To Ask
+
+
+
+
+
+
+
+
+7. System Diagram
+![](https://github.com/akashsonowal/ml-with-akash/blob/main/ml-system-design/assets/youtube_recommendation_system.svg)
