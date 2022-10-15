@@ -117,6 +117,6 @@ At the model level, it's good to measure the accuracy, precision, recall, and f1
 If we assume there are non-frontal faces, we need a model to perform alignment. This process is sometimes called 'frontalization'. Generally, the goal with side faces, some small occlusions, and maybe images with illumination problems is to find landmarks on the face. We can use a pre-trained Multi-task Cascade Convolution Network (MTCNN). It works by generating and refining candidate bounding boxes with 3 stages of CNNs. It outputs 5 landmarks. The benefit with MTCNN is that it frames face detection and alignment as a joint problem.
 
 8. High Level System Diagram
-[](https://github.com/akashsonowal/ml-with-akash/blob/main/ml-system-design/assets/facebook_tagging_high_level.png)
+![](https://github.com/akashsonowal/ml-with-akash/blob/main/ml-system-design/assets/facebook_tagging_high_level.png)
 10. Tag Suggestion Service Diagram
-[](https://github.com/akashsonowal/ml-with-akash/blob/main/ml-system-design/assets/facebook_tag_suggestion.png)
+![](https://github.com/akashsonowal/ml-with-akash/blob/main/ml-system-design/assets/facebook_tag_suggestion.png)
