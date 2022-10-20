@@ -16,3 +16,5 @@ Clarifying Questions To Ask
 
 7. System Diagram
 ![](https://github.com/akashsonowal/ml-with-akash/blob/main/ml-system-design/assets/youtube_recommendation_system.svg)
+
+Note: The candidate generators and ranking models are models present in the model store.
