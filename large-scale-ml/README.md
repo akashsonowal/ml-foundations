@@ -1,7 +1,5 @@
 # Large Scale Machine Learning
 
-# Large Scale Machine Learning
-
 ## Data Support
 1. Data Ingestion
 - Streaming Ingestion: Click Stream (millions/sec)
