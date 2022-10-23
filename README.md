@@ -42,10 +42,10 @@
 ## 3.6. Reinforcement Learning
 - RL
 
-# 4. Business
-- Product Sense
-- Case Studies
-
-# 5. Large Scale ML
+# 4. Large Scale ML
 - Basics of ML System Design [Data Engg + MLOps]
 - Distributed Programming [PySpark (ML) + TF & PyTorch (DL)] 
+
+# 5. Business
+- Product Sense
+- Case Studies
