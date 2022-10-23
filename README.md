@@ -47,5 +47,5 @@
 - Case Studies
 
 # 5. Large Scale ML
-- Basics of ML System Design [DE + MLOps]
+- Basics of ML System Design [Data Engg + MLOps]
 - Distributed Programming [PySpark (ML) + TF & PyTorch (DL)] 
