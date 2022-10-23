@@ -1,4 +1,4 @@
-# The Ultimate Resource to become the best ML Engineer or Applied Scientist
+# Machine Learning with Akash
 
 # 01. Programming
 - DSA
