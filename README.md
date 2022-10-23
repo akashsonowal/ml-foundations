@@ -3,8 +3,8 @@
 # 1. Programming
 - DSA
 - SQL & DB Design
-- Python Libaries [ML + DL]
 - Basics of SWE [Python Developer]
+- Python Libaries [ML + DL]
 
 # 2. Fundamentals
 - Linear Algebra & Calculus
