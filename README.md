@@ -1,12 +1,12 @@
 # Machine Learning with Akash
 
-# 01. Programming
+# 1. Programming
 - DSA
 - SQL & DB Design
 - Python Libaries [ML + DL]
 - Basics of SWE [Python Developer]
 
-# 02. Fundamentals
+# 2. Fundamentals
 - Linear Algebra & Calculus
 - Probability & Statistics
 - EDA & Visualizations
