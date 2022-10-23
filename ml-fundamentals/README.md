@@ -87,6 +87,7 @@ Using a weighted probability distribution as a way to find the Initial centroid 
 | Agglomerative Clustering
 Aclustering algorithm that builds a hierarchy of subclusters that gradually group into a single cluster. Some techniques for measuring
 distances between clusters are single-linkage and complete-linkage methods.
+Note: For non-separable data points we can use agglomerative clustering.
 
 ## 
 | Singular Value Decomposition i
