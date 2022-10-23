@@ -50,7 +50,7 @@
 - Product Sense
 - Case Studies
 
-# 6. Applied Case Studies
+# 6. Applied Case Studies (with source codes)
 - Tabular
 - Text
 - Images
