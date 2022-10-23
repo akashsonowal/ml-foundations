@@ -42,9 +42,11 @@
 ## 3.6. Reinforcement Learning
 - RL
 
-# 4. Large Scale ML
-- Basics of ML System Design [Data Engg + MLOps]
-- Distributed Programming [PySpark (ML) + TF & PyTorch (DL)] 
+# 4. Large Scale ML (includes System Design)
+- Data Support [Basics of Data Engg]
+- Exploration & Experimentation [MLOps]
+- Large Scale Training [PySpark (ML) + TF & PyTorch (DL)]
+- Productionization & Hosting (with Serving) [MLOps]
 
 # 5. Business
 - Product Sense
