@@ -107,6 +107,7 @@ principle components and the elgenvalues indicate the variance described by each
 perform PCA. PCA assumes linear correlations in the data. If that assumption Is not true, then you can use kernel PCA. §
 | orthogonal @
 Perpendicular s n-dimensions.
+Note: PCA assumes linear correlations. For non-linear use kernel PCA.
 
 # Deep Learning
 
@@ -139,6 +140,7 @@ Astate of arecommendation system in which user behavior is reinforced by the rec
 I shilling Attack 3
 Atype of attack on a recommendation system in which users manipulate the recommendations by inflating or deflating positive 3
 Interactions for their own or competing items. §
+Pearson distance helps us deal with different kind of users (say optimist and pessimist)
 
 # Ranking
 | Candidate Generator 1
