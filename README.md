@@ -1,153 +1,51 @@
-# ml-expert
+# The Ultimate Resource to become the best ML Engineer or Applied Scientist
 
-What exceptional work have I done in software, hardware or AI?
+# 01. Programming
+- DSA
+- SQL & DB Design
+- Python Libaries [ML + DL]
+- Basics of SWE [Python Developer]
 
-## Coding & Tools
-- Python Programming, OOPs, Problem Solving (DSA), CS Fundamentals
-- Databases (Structured, Unstructed)
-- Python Developement, Tools, Cloud 
-- Tableu, Excel, PowerBI, R-programming
+# 02. Fundamentals
+- Linear Algebra & Calculus
+- Probability & Statistics
+- EDA & Visualizations
+- Statistical Testing
 
-## Probability & Statistics
+# 3. ML Models
 
-## Product Strategy & Business
-
-## Machine Learning
-- Supervised
-- Unsupervised
-- Self-Supervised
-- Reinforcement
-
-## Applied Machine Learning Science
-- Causal AI
-- Recommender Systems
-- Computer Vision
-  - Image Classification 
-  - Object Detection
-  - Image Segmentation
-  - Visual and Intepretation
-- Natural Language Processes
-  - Machine Translation
-  - Document Search
-  - Auto-Correct
-  - POS and HMM
-  - NER
-  - Siamese Networks
-  - Text Summarization
-  - Question Answering
-  - Chat-Bots
-- Forecasting
-- Generative Processes
-  - GANs for Data Augmentation & Privacy Preservation 
-  - Image to Image Translation 
-  - Neural Style Transfer
-
-## MLOps and Big Data
-- ML Lifecycle
-- Engineering Stuffs for ML
-- Hyperparameters
-
-## Distributed ML
-- Training 
-- Serving
-
-## ML System Design
-- Batch
-- Real
-
-
-
-
-
-
-
-=========================================================
-
-## Classical Machine Learning
-1. Supervised Learning (Regression and Classification)
+## 3.1 Supervised Learning
+- Naive Bayes
+- K-Nearest Neighbors
+- Decision Tree
 - Linear Regression
-- Multiple Linear Regression
 - Logistic Regression
-- Neural Network
-- Random Forest and XGBoost
-2. Unsupervised Learning
-- K-Means Clustering 
-- Anomaly Detection
-3. Recommender Systems
-- Collaborative Filtering
-- Content-Based DL method
+- Support Vector Machine
+- Performance of Models
 
-## Deep Learning 
-1. Basics
-2.  CNN
- - Foundations
- - Object Detection
- - Facial Recognition
- - Neural Style Transfer
-3. Sequence Model
- - RNN
-  - RNN Basic
-  - LSTM
-  - GRU
-  - Bidirectional RNNs
-  - Applications: Named Entity Recognition, Neural Machine Translation
- - Attention 
-  - Transformers
-  - NER
-  - QA
+## 3.2 Unsupervised Learning
+- K-Means
+- SVD
 
-## Natural Language Processing
-4. With Attention Models
-- Neural Machine Translation
-- Text Summarization
-- Question Answering
-- Chatbot
+## 3.3. Deep Learning
+- NN
+- CNN
+- RNN
+- GAN
 
-Data and Applied Scientist Role at Meta, Apple, Amazon, Netflix, Google
+## 3.4. Recommender Systems
+- Collaborative & Content-Based Filtering
 
-Technical Interviews
-- Probability
-- Statistics
-- Machine Learning
-- Deep Learning
-- SQL & Data Engineering (Basics)
-- Coding
+## 3.5. Ranking
+- Learning to Rank
+
+## 3.6. Reinforcement Learning
+- RL
+
+# 4. Business
 - Product Sense
 - Case Studies
 
-# Data & Applied Scientist at MAANG
-
-## Concepts
-- [ ] MLExpert
-- [ ] Notes (Long + Short)
-- [ ] ML from scratch (coding)
-
-## Coding & Problem Solving
-- [ ] DSA
-- [ ] Probability & Stats
-- [ ] SQL
-- [ ] Aptitude & Puzzles
-- [ ] Case Studies
-
-## Industry Updates
-- [ ] Follow TheSequence
-
-## Engineering Skills 
-- [ ] MLOps Project (Ganta Raju): Sept
-- [ ] FSDL Project: Oct
-- [ ] MLOps Zoomcamp Project: Nov
-- [ ] MadewithML (MLOps) Project: Sept - Dec
-- [ ] PyTorch (ZTM) 1 Projects: Sept - Dec
-- [ ] Tensorflow (ZTM) Projects
-
-## Certifications
-- [ ] Tensorflow
-- [ ] PyTorch
-- [ ] Distributed ML (large scale)
-- [ ] AWS Machine Learning
-- [ ] Azure Machine Learning
-- [ ] GCP Machine Learning
-- [ ] Excel
-- [ ] Power BI
-- [ ] Tableau
-- [ ] JAX (later)
+# 5. Large Scale ML
+- Basics of ML System Design [DE + MLOps]
+- Distributed Programming [PySpark (ML) + TF & PyTorch (DL)] 
