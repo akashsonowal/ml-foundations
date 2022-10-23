@@ -49,3 +49,6 @@
 # 5. Business
 - Product Sense
 - Case Studies
+
+# 6. Applied Case Studies
+
