@@ -44,7 +44,7 @@
 - Data Support [Basics of Data Engg]
 - Exploration & Experimentation [MLOps]
 - Large Scale Training [PySpark (ML) + TF & PyTorch (DL)]
-- Productionization & Hosting (with Serving) [MLOps]
+- Productionization & Hosting [MLOps]
 
 # 5. Business
 - Product Sense
