@@ -9,8 +9,6 @@
 # 2. Fundamentals
 - Linear Algebra & Calculus
 - Probability & Statistics
-- EDA & Visualizations
-- Statistical Testing
 
 # 3. ML Models
 
