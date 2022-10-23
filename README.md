@@ -51,4 +51,9 @@
 - Case Studies
 
 # 6. Applied Case Studies
+- Tabular
+- Text
+- Images
+- Speech
+- Multimodal
 
