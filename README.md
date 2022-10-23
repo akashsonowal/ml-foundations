@@ -42,8 +42,8 @@
 
 # 4. Large Scale ML (with System Design)
 - Data Support [Basics of Data Engg]
-- Exploration & Experimentation [MLOps]
 - Large Scale Training [PySpark (ML) + TF & PyTorch (DL)]
+- Exploration & Experimentation [MLOps]
 - Productionization & Hosting [MLOps]
 
 # 5. Business
