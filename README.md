@@ -10,12 +10,13 @@
 - Probability & Statistics
 - Linear Algebra & Calculus
 
-## 2.1 Model Evaluation & Selection
-## 2.2 Model Training
-
 # 3. ML Models
 
-## 3.1 Supervised Learning
+## 3.1 Model Evaluation & Selection
+
+## 3.2 Model Training
+
+## 3.3 Supervised Learning
 - Naive Bayes
 - K-Nearest Neighbors
 - Decision Tree
@@ -24,23 +25,23 @@
 - Support Vector Machine
 - Performance of Models
 
-## 3.2 Unsupervised Learning
+## 3.4 Unsupervised Learning
 - K-Means
 - SVD
 
-## 3.3. Deep Learning
+## 3.5 Deep Learning
 - NN
 - CNN
 - RNN
 - GAN
 
-## 3.4. Recommender Systems
+## 3.6. Recommender Systems
 - Collaborative & Content-Based Filtering
 
-## 3.5. Ranking
+## 3.7. Ranking
 - Learning to Rank
 
-## 3.6. Reinforcement Learning
+## 3.8. Reinforcement Learning
 - RL
 
 # 4. Large Scale ML (with System Design)
