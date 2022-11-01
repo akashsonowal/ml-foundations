@@ -1,14 +1,17 @@
 # Machine Learning with Akash
 
 # 1. Programming
-- DSA
-- SQL & DB Design
+- DSA **
+- SQL & DB Design **
 - Basics of SWE [Python Developer]
 - Python Libaries [ML + DL]
 
 # 2. Fundamentals
-- Linear Algebra & Calculus
 - Probability & Statistics
+- Linear Algebra & Calculus
+
+## 2.1 Model Evaluation & Selection
+## 2.2 Model Training
 
 # 3. ML Models
 
