@@ -24,7 +24,9 @@ Return helps us take into account time also to make our algorithm impatinet.
 
 $$ Return = R_{1} + \gamma R_{2} + \gamma^{2} R_{3} + \gamma^{3} R_{4} + ... (until terminal state) $$ 
 
-Return is the return calculated if it starts at start state and $R_{i}$ is the reward associated at state S.
+Return is the return calculated if it starts at start state and $R_{i}$ is the reward associated at state S. 
+
+Rewards depend on actions and returns depend on reward thus reward depend on actions.
 
 
 So, $\gamma$ defines the less weightage to later states.
@@ -34,6 +36,10 @@ The action can be mix of both left and right.
 Policy can be either reaching the shortest terminal state fast or left or right or go to nearest.
 
 $state -(policy) \pi -> action taken $
+
+Policy is to pick the actions that maxmises the return.
+
+$\pi(s) = a$
 
 ## Quiz 1
 
