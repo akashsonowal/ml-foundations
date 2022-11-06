@@ -22,7 +22,7 @@ We traverse till we reach the terminal state.
 
 Return helps us take into account time also to make our algorithm impatinet.
 
-$$ R = R_{1} + \gamma R
+$$ R = R_{1} + \gamma R $$
 
 ## Quiz 1
 
