@@ -72,6 +72,20 @@ Given the rewards and actions below, compute the return from state 3 with a disc
 
 # State-Action Value Function
 
+Q(s,a) is at state s take action a and behave optimally after that.
+
+for every state we can determine the Q(s, a) value depending on the action taken.
+
+The best action is maxa(Q(s, a)
+
+so $\pi(s) = a$ is the a that maximises the Q(s, a)
+
+the gamma values determines the patience. High gamma means more patience and low gamma means less patience.
+
+Bellman equation formalizes the definition of Q(s, a) value function.
+
+IN real world our robot may not go optimially so we have expected return of the series of actions taken.
+
 ## Quiz 2
 
 # Continuous State Space
