@@ -90,6 +90,10 @@ IN real world our robot may not go optimially so we have expected return of the 
 
 # Continuous State Space
 
+The state space can be continuous. e.g. (x, y, theta, velocity)
+
+we train a neural network to compute the Q(s, a)
+
 ## Quiz 3
 
 # LAB
