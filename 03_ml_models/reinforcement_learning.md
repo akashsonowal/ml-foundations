@@ -49,26 +49,6 @@ The above formulaism is known as MDP. It uses the concepts of the reward, discou
 The future only depends on curent state but not in everything that might have occured
 ## [Quiz 1: RL Introduction](https://github.com/greyhatguy007/Machine-Learning-Specialization-Coursera/tree/eb7aab8b6964336d3d8569f6e9380ca83775969e/C3%20-%20Unsupervised%20Learning%2C%20Recommenders%2C%20Reinforcement%20Learning/week3/Practice%20quiz%20:%20Reinforcement%20learning%20introduction)
 
-Question 1
-You are using reinforcement learning to control a four legged robot. The position of the robot would be its _state____.
-
-Question 2
-You are controlling a Mars rover. You will be very very happy if it gets to state 1 (significant scientific discovery), slightly happy if it gets to state 2 (small scientific discovery), and unhappy if it gets to state 3 (rover is permanently damaged). To reflect this, choose a reward function so that:
-
-R(1) > R(2) > R(3) where R(1) and R(2) is positive and R(3) Is negative
-
-Question 3
-You are using reinforcement learning to fly a helicopter. Using a discount factor of 0.75, your helicopter starts in some state and receives rewards -100 on the first step, -100 on the second step, and 1000 on the third and final step (where it has reached a terminal state). What is the return?
--0.75*100 - 0.75^2*100 + 0.75^3*1000 
-
-Question 4
-Given the rewards and actions below, compute the return from state 3 with a discount factor of $\gamma = 0.25$.
-
-6.25
-
-
-
-
 
 # State-Action Value Function
 
@@ -86,7 +66,9 @@ Bellman equation formalizes the definition of Q(s, a) value function.
 
 IN real world our robot may not go optimially so we have expected return of the series of actions taken.
 
-## Quiz 2
+[State-Action Value Function: Optional Lab]()
+
+## [Quiz 2](https://github.com/greyhatguy007/Machine-Learning-Specialization-Coursera/tree/eb7aab8b6964336d3d8569f6e9380ca83775969e/C3%20-%20Unsupervised%20Learning%2C%20Recommenders%2C%20Reinforcement%20Learning/week3/Practice%20Quiz%20:%20State-action%20value%20function)
 
 # Continuous State Space
 
@@ -94,6 +76,6 @@ The state space can be continuous. e.g. (x, y, theta, velocity)
 
 we train a neural network to compute the Q(s, a)
 
-## Quiz 3
+## [Quiz 3](https://github.com/greyhatguy007/Machine-Learning-Specialization-Coursera/tree/eb7aab8b6964336d3d8569f6e9380ca83775969e/C3%20-%20Unsupervised%20Learning%2C%20Recommenders%2C%20Reinforcement%20Learning/week3/Practice%20Quiz%20:%20Continuous%20state%20spaces)
 
 # LAB
