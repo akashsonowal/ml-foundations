@@ -47,7 +47,7 @@ Markov Decision Proces
 
 The above formulaism is known as MDP. It uses the concepts of the reward, discountfactor, return, policy. 
 The future only depends on curent state but not in everything that might have occured
-## (Quiz 1: RL Introduction)[https://github.com/greyhatguy007/Machine-Learning-Specialization-Coursera/tree/eb7aab8b6964336d3d8569f6e9380ca83775969e/C3%20-%20Unsupervised%20Learning%2C%20Recommenders%2C%20Reinforcement%20Learning/week3/Practice%20quiz%20:%20Reinforcement%20learning%20introduction]
+## [Quiz 1: RL Introduction](https://github.com/greyhatguy007/Machine-Learning-Specialization-Coursera/tree/eb7aab8b6964336d3d8569f6e9380ca83775969e/C3%20-%20Unsupervised%20Learning%2C%20Recommenders%2C%20Reinforcement%20Learning/week3/Practice%20quiz%20:%20Reinforcement%20learning%20introduction)
 
 Question 1
 You are using reinforcement learning to control a four legged robot. The position of the robot would be its _state____.
