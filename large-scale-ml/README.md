@@ -1,4 +1,4 @@
-# Large Scale Machine Learning
+# Large Scale Machine Learning (with MLOps)
 
 ## Data Support
 1. Data Ingestion
