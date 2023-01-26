@@ -1,3 +1,9 @@
+[![Language](https://img.shields.io/badge/python-3.8-blue.svg)](https://www.python.org)
+![](https://img.shields.io/github/issues/akashsonowal/coding-with-akash?style=plastic)
+![](https://img.shields.io/github/forks/akashsonowal/coding-with-akash)
+![](https://img.shields.io/github/stars/akashsonowal/coding-with-akash)
+![](https://img.shields.io/github/license/akashsonowal/coding-with-akash)
+
 # Machine Learning with Akash
 
 # 1. Programming
