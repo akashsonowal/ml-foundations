@@ -41,7 +41,7 @@ def elbo(beta_loc, beta_log_scale, epsilon):
   return jnp.mean(batched_log_joint(beta_sample), 0) + jnp.sum(beta_log_scale - 0.5 * np.log(2*np.pi)) # mean of joint prob + penalty term to avoid high vraiance
 
 elbo = jax.jit(elbo)
-elbo_val_and_grad = jax.jit(jax.value_and_grad(elbo, argnums=(0, 1)) # for differentiation w.r.t beta_loc and beta_log_scale
+elbo_val_and_grad = jax.jit(jax.value_and_grad(elbo, argnums=(0, 1))) # for differentiation w.r.t beta_loc and beta_log_scale
 
 def normal_sample(key, shape):
   "Convenient function for quasi-stateful RNG."
