@@ -29,12 +29,13 @@ def log_joint(beta):
 
 batched_log_joint = jax.jit(jax.vmap(log_joint))
 
-# define elbo and its gradient
+# define elbo 
 def elbo(beta_loc, beta_log_scale, epsilon):
   beta_sample = beta_loc + jnp.exp(beta_log_scale) * epsilon
   return jnp.mean(batched_log_joint(beta_sample), 0) + jnp.sum(beta_log_scale - 0.5 * np.log(2*np.pi)) # mean of joint prob + penalty term to avoid high vraiance
 
 elbo = jax.jit(elbo)
+# define elbo's gradient
 elbo_val_and_grad = jax.jit(jax.value_and_grad(elbo, argnums=(0, 1))) # for differentiation w.r.t beta_loc and beta_log_scale
 
 def normal_sample(key, shape):
