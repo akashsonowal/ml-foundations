@@ -68,5 +68,12 @@ for i in range(1000):
     print(f'{i}\t{elbo_val})
           
  # Visualize results
- figure(figsize=(7, 7))
- 
+figure(figsize=(7, 7))
+plot(true_beta, beta_loc, '.', 'Approximated Posterior Means')
+plot(true_beta, beta_loc + 2*jnp.exp(beta_log_scale), 'r.', label='Approximated Posterior $2\sigma$ Error Bars')
+plot(true_beta, beta_loc - 2*jnp.exp(beta_log_scale), 'r.')
+plot_scale = 3
+plot([-plot_scale, plot_scale], [-plot_scale, plot_scale], 'k')
+xlabel("True beta")
+ylabel("Estimated beta")
+legend(loc="best")
