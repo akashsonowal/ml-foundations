@@ -29,13 +29,19 @@ y = (np.random.rand(num_points) < sp.special.expit(all_x.dot(true_beta))).astype
 @jax.jit
 def log_joint(beta):
   result = 0.
+  result += jnp.sum(jsp.stats.norm.logpdf(beta, loc=0., scale=10.))
+  result += jnp.sum(-jnp.log(1 + jnp.exp(-(2*y - 1) * jnp.dot(all_x, beta))))
   return result
 
 batched_log_joint = jax.jit(jax.vmap(log_joint))
 
 # define elbo and its gradient
 def elbo(beta_loc, beta_log_scale, epsilon):
-  pass
+  beta_sample = beta_loc + jnp.exp(beta_log_scale) * epsilon
+  return jnp.mean(batched_log_joint(beta_sample), 0) + jnp.sum(beta_log_scale - 0.5 * np.log(2*np.pi)) # mean of joint prob + penalty term to avoid high vraiance
+
+elbo = jax.jit(elbo)
+elbo_val_and_grad = jax.jit(jax.value_and_grad(elbo, argnums=(0, 1)) # for differentiation w.r.t beta_loc and beta_log_scale
 
 def normal_sample(key, shape):
   "Convenient function for quasi-stateful RNG."
@@ -55,4 +61,12 @@ batch_size = 128
 epsilon_shape = (batch_size, features) # random noise to avoid local minima
 for i in range(1000):
   key, epsilon = normal_sample(key, epsilon_shape)
-  pass
+  elbo_val, (beta_loc_grad, beta_log_scale_grad) = elbo_val_and_grad(beta_loc, beta_log_scale_grad, epsilon)
+  beta_loc += step_size * beta_loc_grad
+  beta_log_scale += step_size *  beta_log_scale_grad
+  if i % 10 == 0:
+    print(f'{i}\t{elbo_val})
+          
+ # Visualize results
+ figure(figsize=(7, 7))
+ 
