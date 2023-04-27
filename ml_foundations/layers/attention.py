@@ -22,4 +22,16 @@ class Attention(nn.Module):
         self.proj_drop = nn.Dropout(proj_drop)
     
     def forward(self, x: Tensor) -> Tensor:
-        pass
+        B, N, C = x.shape # (Batch size, sequence len, embeddding dim)
+        qkv = self.qkv(x).reshape(B, N, 3, self.num_heads, C // self.num_heads).permute(2, 0, 3, 1, 4) #(3, B, num_heads, N, C//num_heads)
+
+        q, k, v = qkv[0] * self.scale, qkv[1], qkv[2]
+        attn = q @ k.transpose(-2, -1)
+
+        attn = attn.softmax(dim=-1)
+        attn = self.attn_drop(attn)
+
+        x = (attn @ v).transpose(1, 2).reshape(B, N, C)
+        x = self.proj(x)
+        x = self.proj_drop(x)
+        return x 
