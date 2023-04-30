@@ -1,3 +1,14 @@
+## MDP (Markov Decision Process)
+rl can be formulated as a MDP. we have (S, A, T, r)  where T is transition function. r is reward at state s and action a. S, A is set of all states and actions.
+
+return is the sum of rewards for a trajectory with discount factors to take care of time to achieve goals.
+
+## Value Iteration
+
+## Q-Learning
+
+
+===========================================================================================
 - [Free Resource](https://github.com/greyhatguy007/Machine-Learning-Specialization-Coursera)
 
 # Introduction
