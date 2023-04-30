@@ -22,4 +22,7 @@ Overview of Recommender Systems
    - click through rate prediction (implicit feedbackwith many categorical features)
    - recommendation for new users and new items to existing users (cold start recommendation).
  
+## Movie Lena Dataset (100k) 
+| user_id | item_id | rating | timestamp|
+
  
