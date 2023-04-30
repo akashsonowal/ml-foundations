@@ -3,6 +3,7 @@
 # Introduction
 
 state -> action
+
 x -> y
 
 given a state what actions to take? This cannot be supervised becuase we don't know optimal y but we can learn through rewadr function
