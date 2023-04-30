@@ -32,11 +32,30 @@ we use additional side info such as user/item features to alleviate the sparsity
 
 plot the distribution of count of different ratings.
 
-split the ratings dataset (random and sequence aware: newest for test and hostoricl for train)
+split the ratings dataset (random and sequence aware: newest for test and hostoricl for train):
+each train data and test data has the same columns as ratings dataset. in temporal, same user data should be present in train and test set (offcourse the latest one in test)
 
-make users, items, scores and interactions.
+make users, items, scores and interactions. the users and items are list of user_index and item_index from spliting the column in dataframe. if explicit then interactions, then inter is a 2d matrix of user-item interactions. If feedback is implicit then inter is {user_index: iten_index} and scores is list of values of 1.
+
+Now load the users array, items array and scores array into dataloader with batch size....don't touch iteractions.
 
 ## Matrix Factorization
 factoring the interaction matrix
+now we train a matrix factorization model with X as (user, item) and Y as scores.
+matrix factor model takes the user items in batch and geting the embedding for it. and same with items...then dot-product and take sum in latent axis + add biases to get a 1d array of scores of that batch.
+
+## AutoRec: Rating Predictions with AutoEncoders
+
+## Personalized Ranking for Recommender Systems
+
+## Neural Collaborative Filtering for Personalized Ranking
+
+## Sequence Aware Recommender Systems
+
+## Feature Rich Recommender Systems
+
+## Factorization Machines
+
+## Deep Factorization Machines
 
  
