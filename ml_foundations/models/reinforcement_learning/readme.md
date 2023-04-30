@@ -1,9 +1,18 @@
 ## MDP (Markov Decision Process)
-rl can be formulated as a MDP. we have (S, A, T, r)  where T is transition function. r is reward at state s and action a. S, A is set of all states and actions.
+rl can be formulated as a MDP. we have (S, A, T, r)  where T is transition function. r is reward for action a taken at state s. S, A is set of all states and actions.
 
 return is the sum of rewards for a trajectory with discount factors to take care of time to achieve goals.
 
-## Value Iteration
+How to maximize return of a trajectory by picking best action at each state. we need to learn the policy of how to take the best action.
+
+## Value Iteration (Algorithm)
+
+In deterministic policy the actions are deterministic i.e., no probability. The value function is the average of returns for all trajectory possible under the policy.
+We can break the expression into 2 parts.
+
+Also write the action-value function. 
+
+the Value Iteration algorithm is to use the principle of dynamic programming to find the optimal average return obtained from a given state
 
 ## Q-Learning
 
