@@ -13,5 +13,13 @@ Overview of Recommender Systems
 - Explicit Feedback and Implicit Feedback:
   explicit: youtube likes, imdb ratings. It is hard to collect as user needs to proactive to give the feedbacks.
   implicit: user clicks, purchase history, browsing history, watches and even mouse movements. The implicit data is very noisy.
+ - Recommendation tasks
+   - movies recommendation, news recommendation, point-of-interest recommendation. 
+   - based on tasks of feedback and input data. 
+   - rating prediction task predicts explicit ratings.
+   - Top-n recommendation (item ranking) ranks all items for each user personally based on implicit feedback.
+   - If time stamp info is also incuded, we can build sequence aware recommendation.
+   - click through rate prediction (implicit feedbackwith many categorical features)
+   - recommendation for new users and new items to existing users (cold start recommendation).
  
  
