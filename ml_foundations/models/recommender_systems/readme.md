@@ -24,5 +24,19 @@ Overview of Recommender Systems
  
 ## Movie Lena Dataset (100k) 
 | user_id | item_id | rating | timestamp|
+this is the ratings dataset
+
+after this construct the interative matrix of size n x m. we can calculate the sparsity of this matrix using 1- (non-zero entries) / (num_users * num_items).
+
+we use additional side info such as user/item features to alleviate the sparsity.
+
+plot the distribution of count of different ratings.
+
+split the ratings dataset (random and sequence aware: newest for test and hostoricl for train)
+
+make users, items, scores and interactions.
+
+## Matrix Factorization
+factoring the interaction matrix
 
  
