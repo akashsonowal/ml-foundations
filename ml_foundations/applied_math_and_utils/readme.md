@@ -4,6 +4,6 @@
 
 ## Information Theory
 
-# Optimization Algorithms
+## Optimization Algorithms
 
-# Hyperparamter Optimization
+## Hyperparamter Optimization
