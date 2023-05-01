@@ -4,40 +4,7 @@
 ![](https://img.shields.io/github/stars/akashsonowal/ml-with-akash)
 ![](https://img.shields.io/github/license/akashsonowal/ml-with-akash)
 
-# Machine Learning with Akash
-
-# 1. Programming
-- DSA **
-- SQL & DB Design **
-- Basics of SWE [Python Developer]
-- Python Libaries [ML + DL]
-
-# 2. Fundamentals
-- Probability & Statistics
-- Linear Algebra & Calculus
-
-# 3. ML Models
-
-## 3.1 Model Evaluation & Selection
-
-## 3.2 Model Training
-
-## 3.3 
-
-## 3.5 Deep Learning
-- NN
-- CNN
-- RNN
-- GAN
-
-## 3.6. Recommender Systems
-- Collaborative & Content-Based Filtering
-
-## 3.7. Ranking
-- Learning to Rank
-
-## 3.8. Reinforcement Learning
-- RL
+# [Official Repo] Machine Learning Foundations
 
 # 4. Large Scale ML (with System Design)
 - Data Support [Basics of Data Engg]
@@ -48,11 +15,3 @@
 # 5. Business
 - Product Sense
 - Case Studies
-
-# 6. Applied Case Studies (with source codes)
-- Tabular
-- Text
-- Images
-- Speech
-- Multimodal
-
