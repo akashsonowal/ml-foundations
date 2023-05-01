@@ -1,3 +1,5 @@
+# Basic Models vs Deep Models
+
 # ML from scratch
 https://github.com/eriklindernoren/ML-From-Scratch#implementations
 
