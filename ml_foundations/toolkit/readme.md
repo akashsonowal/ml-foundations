@@ -1,7 +1,0 @@
-# Toolkit
-
-## PyTorch
-
-## TensorFlow
-
-## JAX
