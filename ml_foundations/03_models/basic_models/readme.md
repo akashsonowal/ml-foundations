@@ -1,12 +1,18 @@
-Implement all Algorithms in Python from Scratch without libraries
+# Implementation of Basic Models [From Scratch]
 
 - https://machinelearningmastery.com/category/algorithms-from-scratch/
 - https://github.com/eriklindernoren/ML-From-Scratch
 
-## k-Means
 
-## k-Nearest Neighbors
+## Supervised Learning
+- Naive Bayes
+- K-Nearest Neighbors
+- Decision Tree
+- Linear Regression
+- Logistic Regression
+- Support Vector Machine
+- Performance of Models
 
-## Multinomial Naive Bayes
-
-## Regression Trees
+## 3.4 Unsupervised Learning
+- K-Means
+- SVD
