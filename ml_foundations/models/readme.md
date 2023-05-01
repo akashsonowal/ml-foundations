@@ -1,27 +1,12 @@
-# Basic Models vs Deep Models
+# [Code Implementation] Models 
 
-# ML from scratch
 https://github.com/eriklindernoren/ML-From-Scratch#implementations
 
-## Recommender Systems
+## Basic Models
 
 ## Ranking 
 - https://medium.com/data-science-at-microsoft/search-and-ranking-for-information-retrieval-ir-5f9ca52dd056
 
-
-## Reinforcement Learning
-
-
-# MLExpert
-# Introduction
-
-## Supervised Learning
-
-Optimizing machine learning models based on previously observed features and labels. Typically, the goal is to attach the most likely label to some provided features
-
-## Unsupervised Learning
-
-An approach within machine learning that takes in unlabeled examples and produces patterns from the provided data. Typically, the goal is to discover something previously unknown about the unlabeled examples.
 
 ## Deep Learning
 
