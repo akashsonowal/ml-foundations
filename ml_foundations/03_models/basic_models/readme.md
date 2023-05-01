@@ -1,4 +1,4 @@
-# Implementation of Basic Models [From Scratch]
+# [Scratch] Implementation of Basic Models
 
 - https://machinelearningmastery.com/category/algorithms-from-scratch/
 - https://github.com/eriklindernoren/ML-From-Scratch
