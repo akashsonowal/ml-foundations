@@ -1,5 +1,6 @@
 # [Scratch] Implementation of Basic Models
 
+Resoures:
 - https://machinelearningmastery.com/category/algorithms-from-scratch/
 - https://github.com/eriklindernoren/ML-From-Scratch
 
@@ -13,6 +14,6 @@
 - Support Vector Machine
 - Performance of Models
 
-## 3.4 Unsupervised Learning
+## Unsupervised Learning
 - K-Means
 - SVD
