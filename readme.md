@@ -5,13 +5,3 @@
 ![](https://img.shields.io/github/license/akashsonowal/ml-with-akash)
 
 # [Official Repo] Machine Learning Foundations
-
-# 4. Large Scale ML (with System Design)
-- Data Support [Basics of Data Engg]
-- Large Scale Training [PySpark (ML) + TF & PyTorch (DL)]
-- Exploration & Experimentation [MLOps]
-- Productionization & Hosting [MLOps]
-
-# 5. Business
-- Product Sense
-- Case Studies
