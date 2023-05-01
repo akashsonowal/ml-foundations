@@ -6,4 +6,4 @@
 
 ## Optimization Algorithms
 
-## Hyperparamter Optimization
+## Hyperparameter Optimization
