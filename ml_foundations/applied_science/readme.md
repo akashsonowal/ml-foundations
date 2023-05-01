@@ -1,4 +1,4 @@
-# Applied Science Case Studies (Implementation Vault)
+# [Code Implementation] Applied Science Case Studies
 
 This repo is a summary and one stop links for all implementations.
 
