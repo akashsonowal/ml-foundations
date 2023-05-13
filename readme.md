@@ -29,6 +29,7 @@
 
 
 ### [Applied Math and Utilities](https://github.com/akashsonowal/ml-foundations/tree/main/ml_foundations/applied_math_and_utils)
+> Learn the basic applied maths.
 
 ### [Models](https://github.com/akashsonowal/ml-foundations/tree/main/ml_foundations/models)
 
