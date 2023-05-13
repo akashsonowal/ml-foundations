@@ -9,6 +9,10 @@
 
 ## ML Foundations
 
+### Coding Toolkit
+
+### Applied Math and Utilities
+
 ### Models
 
 #### Deep Models
@@ -16,4 +20,4 @@
 - ##### Layers
   - [x] Graph Attention
 
-
+### Applied Science
