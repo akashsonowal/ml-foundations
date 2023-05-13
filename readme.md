@@ -1,4 +1,10 @@
-# [From Scratch] Machine Learning Foundations
+<h1 align="center">
+    <span>Machine Learning Foundations</span>
+</h1>
+
+<div align="center">
+
+<a href="https://github.com/LAION-AI/Open-Assistant/stargazers">![GitHub Repo stars](https://img.shields.io/github/stars/LAION-AI/Open-Assistant?style=social)</a>
 
 <div align="center">
 [![Language](https://img.shields.io/badge/python-3.8-blue.svg)](https://www.python.org)
