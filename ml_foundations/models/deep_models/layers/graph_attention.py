@@ -9,4 +9,7 @@ class GraphAttentionLayer(nn.Module):
     
     if is_concat:
       assert out_features % n_heads == 0
-    
+      self.n_hidden = out_features // n_heads
+    else:
+      self.n_hidden = out_features
+      
