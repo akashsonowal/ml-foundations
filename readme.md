@@ -27,15 +27,11 @@
 ### [Coding Toolkit](https://github.com/akashsonowal/ml-foundations/tree/main/ml_foundations/coding_toolkit)
 > Lean about PyTorch, TensorFlow, JAX 
 
-
 ### [Applied Math and Utilities](https://github.com/akashsonowal/ml-foundations/tree/main/ml_foundations/applied_math_and_utils)
-> Learn the basic applied maths.
+> Learn the basic applied maths
 
 ### [Models](https://github.com/akashsonowal/ml-foundations/tree/main/ml_foundations/models)
-
-#### Deep Models
-
-- ##### Layers
-  - [x] Graph Attention
+> Learn basic and advanced models from code
 
 ### [Applied Science](https://github.com/akashsonowal/ml-foundations/tree/main/ml_foundations/applied_science)
+> Applied science in code
