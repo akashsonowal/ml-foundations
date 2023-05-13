@@ -11,7 +11,9 @@
 
 ### Models
 
-#### Layers
-- [x] Graph Attention
+#### Deep Models
+
+- ##### Layers
+  - [x] Graph Attention
 
 
