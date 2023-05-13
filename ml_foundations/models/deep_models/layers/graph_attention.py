@@ -23,6 +23,23 @@ class GraphAttentionLayer(nn.Module):
     n_nodes = h.shape[0]
     g = self.linear(h.view(n_nodes, self.n_heads, self.n_hidden))
     g_repeat = g.repeat(n_nodes, 1, 1)
-    
+    g_repeat_interleave = g.repeat_interleave(g_repeat, dim=0)
+    g_concat = torch.cat([g_repeat_interleave, g_repeat], dim=-1)
+    g_concat = g_concat.view(n_nodes, n_nodes, self.n_heads, 2*self.n_hidden)
+    e = self.activation(self.attn(g_concat))
+    e = e.squeeze(-1)
 
-      
+    assert adj_mat.shape[0] == 1 or adj_mat.shape[0] == n_nodes
+    assert adj_mat.shape[1] == 1 or adj_mat.shape[1] == n_nodes
+    assert adj_mat.shape[2] == 1 or adj_mat.shape[2] == self.n_heads
+
+    e = e.masked_fill(adj_mat == 0, float('-inf'))
+    a = self.softmax(e)
+    a = self.dropout(a)
+
+    attn_res = torch.einsum('ijh,jhf->ihf', a, g)
+
+    if self.is_concat:
+      return attn_res.reshape(n_nodes, self.n_heads * self.n_hidden)
+    else:
+      return attn_res.mean(dim=1)
