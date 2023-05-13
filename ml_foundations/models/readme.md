@@ -1,6 +1,4 @@
-**# [Code Implementation] Models
-
-https://github.com/eriklindernoren/ML-From-Scratch#implementations
+# [Code Implementations from Scratch] Models
 
 ## Basic Models
 
@@ -8,7 +6,7 @@ https://github.com/eriklindernoren/ML-From-Scratch#implementations
 - https://medium.com/data-science-at-microsoft/search-and-ranking-for-information-retrieval-ir-5f9ca52dd056
 
 
-## Deep Learning
+## Deep Models
 
 Optimizing neural networks, often with many hidden layers, to perform unsupervised or supervised learning.
 
@@ -423,6 +421,7 @@ Alearning rate for gradient boosted trees. §
 Features in addition to item and user embeddings. This can include properties of items and users.
 | Implicit Relevance Feedback
 
+
 Feedback obtained from user behavior as opposed to surveying the user.
 | Presentation and Trust Bias
 
@@ -432,4 +431,5 @@ Biases found within ranking which arise from the placement of items within a ran
 - Code implementation from scratch
 
 
-**
+
+**This package is inspired by this awesoome [repo](https://github.com/eriklindernoren/ML-From-Scratch#implementations)**
