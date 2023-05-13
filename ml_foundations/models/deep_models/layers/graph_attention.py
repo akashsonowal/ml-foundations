@@ -18,5 +18,8 @@ class GraphAttentionLayer(nn.Module):
     self.activation = nn.LeakyReLU(negative_slope=leaky_relu_negative_slope)
     self.softmax = nn.Softmax(dim=1)
     self.dropout = nn.Dropout(dropout)
+  
+  def forward(self, h: torch.Tensor, adj_mat: torch.Tensor):
+    n_nodes = h.shape[0]
 
       
