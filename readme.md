@@ -11,7 +11,7 @@
 
 ### Coding Toolkit
 <details>
-  <summary> ### Coding Tookit </summary>
+  ### <summary> Coding Tookit </summary>
   
   This is the content that will be hidden by default and shown when the drop-down is expanded.
   
