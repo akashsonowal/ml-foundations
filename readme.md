@@ -4,13 +4,13 @@
 
 <div align="center">
 
-<a href="https://github.com/LAION-AI/Open-Assistant/stargazers">![GitHub Repo stars](https://img.shields.io/github/stars/LAION-AI/Open-Assistant?style=social)</a>
+<a href="https://github.com/akashsonowal/ml-foundations/stargazers">![GitHub Repo stars](https://img.shields.io/github/stars/akashsonowal/ml-foundations?style=social)</a>
 
 <div align="center">
 [![Language](https://img.shields.io/badge/python-3.8-blue.svg)](https://www.python.org)
 ![](https://img.shields.io/github/issues/akashsonowal/ml-with-akash?style=plastic)
 ![](https://img.shields.io/github/forks/akashsonowal/ml-with-akash)
-![](https://img.shields.io/github/stars/akashsonowal/ml-with-akash)
+![]()
 ![](https://img.shields.io/github/license/akashsonowal/ml-with-akash)
 </div>
 
