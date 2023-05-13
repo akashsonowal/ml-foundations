@@ -9,7 +9,7 @@
 
 ## ML Foundations
 
-### Coding Toolkit
+- ### Coding Toolkit
 
 <details>
   <summary>Click to expand/collapse</summary>
@@ -19,13 +19,13 @@
   You can add any content here, including text, images, code snippets, etc.
 </details>
 
-### Applied Math and Utilities
+- ### Applied Math and Utilities
 
-### Models
+- ### Models
 
 #### Deep Models
 
 - ##### Layers
   - [x] Graph Attention
 
-### Applied Science
+- ### Applied Science
