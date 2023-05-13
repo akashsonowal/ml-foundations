@@ -9,15 +9,15 @@
 
 ## ML Foundations
 
-- ### Coding Toolkit
+### Coding Toolkit
 
-<details>
+<!-- <details> -->
   <summary>Click to expand/collapse</summary>
   
   This is the content that will be hidden by default and shown when the drop-down is expanded.
   
   You can add any content here, including text, images, code snippets, etc.
-</details>
+<!-- </details> -->
 
 - ### Applied Math and Utilities
 
