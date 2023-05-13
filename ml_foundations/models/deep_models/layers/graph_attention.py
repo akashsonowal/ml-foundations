@@ -21,5 +21,8 @@ class GraphAttentionLayer(nn.Module):
   
   def forward(self, h: torch.Tensor, adj_mat: torch.Tensor):
     n_nodes = h.shape[0]
+    g = self.linear(h.view(n_nodes, self.n_heads, self.n_hidden))
+    g_repeat = g.repeat(n_nodes, 1, 1)
+    
 
       
