@@ -6,6 +6,14 @@
 ![](https://img.shields.io/github/stars/akashsonowal/ml-with-akash)
 ![](https://img.shields.io/github/license/akashsonowal/ml-with-akash)
 
+# Table of Contents
+
+- [What is Coding Toolkit?](#what-is-open-assistant)
+- [Useful Links](#useful-links)
+- [How To Try It Out](#how-to-try-it-out)
+- [The Vision](#the-vision)
+- [The Plan](#the-plan)
+- [How You Can Help](#how-you-can-help)
 
 ## ML Foundations
 
