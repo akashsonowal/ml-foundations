@@ -10,22 +10,15 @@
 ## ML Foundations
 
 ### Coding Toolkit
-<details>
-  ### <summary> Coding Tookit </summary>
-  
-  This is the content that will be hidden by default and shown when the drop-down is expanded.
-  
-  You can add any content here, including text, images, code snippets, etc.
-  
-</details>
 
-- ### Applied Math and Utilities
 
-- ### Models
+### Applied Math and Utilities
+
+### Models
 
 #### Deep Models
 
 - ##### Layers
   - [x] Graph Attention
 
-- ### Applied Science
+### Applied Science
