@@ -11,5 +11,5 @@ class GraphAttentionLayer(nn.Module):
       assert out_features % n_heads == 0
       self.n_hidden = out_features // n_heads
     else:
-      self.n_hidden = out_features
+      self.n_hidden = out_features 
       
