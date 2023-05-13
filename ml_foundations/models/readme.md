@@ -1,10 +1,10 @@
-# [Code Implementation] Models 
+**# [Code Implementation] Models
 
 https://github.com/eriklindernoren/ML-From-Scratch#implementations
 
 ## Basic Models
 
-## Ranking 
+## Ranking
 - https://medium.com/data-science-at-microsoft/search-and-ranking-for-information-retrieval-ir-5f9ca52dd056
 
 
@@ -12,7 +12,7 @@ https://github.com/eriklindernoren/ML-From-Scratch#implementations
 
 Optimizing neural networks, often with many hidden layers, to perform unsupervised or supervised learning.
 
-## Recommendation Systems 
+## Recommendation Systems
 
 Systems with the goal of presenting an item to a user such that the user will most ikely purchase, view, or like the recommended item. Items can take many forms, suich as music, movies, or products. Also called recommender systems.
 
@@ -52,11 +52,11 @@ Indicates how much the output of a function will change with respect to a change
 | Probability €
 How likely something Is to occur. This can be independent, such as the roll of the dice, or conditional, such as drawing two cards
 subsequently out of a deck without replacement.
-| Probability Distribution @)
+| Probability Distribution @
 Afunction that takes in an outcome and outputs the probability of that particular outcome occurring.
-| Gaussian Distribution @)
+| Gaussian Distribution @
 Avery common type of probability distribution which fits many real world observations; also called a normal distribution.
-| uniform Distribution @)
+| uniform Distribution @
 A probability distribution In which each outcome s equally likely; for example, rolling a normal six-sided die.
 
 # Supervised Learning
@@ -70,21 +70,21 @@ label to some provided features. §
 An approximation of a relationship between an input and an output. 1
 I Heuristic
 An approach to finding a solution which Is typically faster but less accurate than some optimal solution. §
-| Bernoulli Distribution @)
+| Bernoulli Distribution @
 Adistribution which evaluates a particular outcome as binary. In the Bernoulli Nalve Bayes classifier case, a word was either ina |
 message or not in a message, which is binary representation. §
 | prior @
 Indicates the probability of a particular class regardless of the features of some example.
-| Likelihood @)
+| Likelihood @
 The probability of some features given a particular class. §
-| Evidence @) |
+| Evidence @ |
 ‘The denominator of the Naive Bayes classifier. §
 
 | Posterior @ |
 The probability of a class given some features. §
 | Vocabulary 3
 The list of words that the Naive Bayes classifier recognizes.
-| Laplace smoothing @)
+| Laplace smoothing @
 Atype of additive smoothing which mitigates the chance of encountering zero probabilities within the Naive Bayes classifier. 3
 | Tokenization
 The splitting of some raw textual input into individual words or elements.
@@ -140,7 +140,7 @@ randomly chosen negative example. §
 Any parameter associated with a model which Is not learned. §
 
 # Naive Bayes Optimization
-| Muitinomial Distribution @)
+| Muitinomial Distribution @
 Adistribution which models the probability of counts of particular outcomes.
 | TF-IDF
 Short for Term Frequency-Inverse Document Frequency, TF-IDF is a method of transforming features, usually representing counts ofi
@@ -162,21 +162,21 @@ Short for Term Frequency-Inverse Document Frequency, TF-IDF Is a method of trans
 words, into values representing the overall importance of different words across some documents. §
 I Cluster §
 A consolidated group of points. §
-| Euciidean Distance @) |
+| Euciidean Distance @|
 The length of the line between two points
 | Feature Normalization
 Typically referring to feature scaling that places the values of a feature between 0 and 1.
 | Feature Standardization
 Typically referring to feature scaling that centers the values of a feature around the mean of the feature and scales by the standard |
 deviation of the feature. i
-| Jaccard Distance @) |
+| Jaccard Distance @ |
 One minus the ratio of the number of like binary feature values and the number of like and unlike binary feature values, excluding
 Instances of matching zeros. §
-| simple Matching Distance @) |
+| simple Matching Distance @ |
 One minus the ratio of the number of like binary feature values and the number of ike and uniike binary feature values. |
-| Manhattan Distance @)
+| Manhattan Distance @
 Sum of the absolute differences of two input features. §
-| Hamming Distance @) |
+| Hamming Distance @ |
 The sum of the non-matching categorical feature values. |
 
 # Decision Tree
@@ -288,7 +288,7 @@ One complete cycle of training on all of the examples.
 Atechnique of limiting the ability for a model to overfit by encouraging the values parameters to take on smaller values.
 | Early Stopping
 Halting the gradient descent process prior to approaching a minima or maxima.
-| Mcfadden's Pseudo R-squared @) |
+| Mcfadden's Pseudo R-squared @ |
 An analog to linear regression's R-squared which typically takes on smaller values than the traditional R-squared.
 | Generative Model
 A model which aims to approximate the joint probability of the features and labels.
@@ -313,9 +313,9 @@ The relaxing of the constraint that all examples must lie outside of the margin.
 Aloss function which Is used by a soft-margin SVM.
 | Sub-gradient 1
 The gradient of a non-differentiable function. §
-| Non.differentiable @) |
+| Non.differentiable @ |
 Afunction which has kinks in which a derivative is not defined.
-| convex Function @)
+| convex Function @
 Function with one optima. |
 | Kernel Trick
 The process of finding the dot product of a high dimensional representation of feature without computing the high dimensional |
@@ -331,9 +331,9 @@ I Centroid
 The location of the center of a cluster in n-dimensions.
 I Inertia
 The sum of distances between each point and the centroid.
-| Local optima @)
+| Local optima @
 AAmaxima or minima which is not the global optima
-| Non-convex Function @)
+| Non-convex Function @
 A function which has two or more instances of zero-slope.
 | Elbow Method
 Amethod of finding the best value for k in k-means. It Involves finding the elbow of the plot of a range of ks and thelr respective
@@ -347,7 +347,7 @@ Aclustering algorithm that builds a hierarchy of subclusters that gradually grou
 distances between clusters are single-linkage and complete-linkage methods.
 Note: For non-separable data points we can use agglomerative clustering.
 
-## 
+##
 | Singular Value Decomposition i
 Also SVD, a process which decomposes a matrix into rotation and scaling terms. It is a generalization of eigendecomposition. §
 | Rank r Approximation i
@@ -356,7 +356,7 @@ Using up to, and including, the rth terms in the singular value decomposition to
 The process of reducing the dimensionality of features. This is typically useful to speed up the training of models and In some cases,
 allow for a wider number of machine learning algorithms to be used on the examples. This can be done with SVD (or PCA) and as well, |
 certaln types of neural networks such as autoencoders. §
-| Eigendecomposition @) |
+| Eigendecomposition @ |
 Applicable only to square matrices, the method of factoring a matrix into its eigenvalues and eigenvectors. An eigenvector is a vector |
 which applies a linear transformation to some matrix being factored. The eigenvalues scale the eigenvector values. 3
 | Principal Component Analysis 1
@@ -376,7 +376,7 @@ A recommendation technique which takes into account a single user's features and
 A recommendation technique which uses many user's and item's data typically in the form of a user-item matrix.
 | User-item Matrix
 /A matrix which contains the Interactions of users and items. Items can take the form of products, music, and videos.
-| Pearson Correlation @)
+| Pearson Correlation @
 A measure of the correlation between two inputs. In the context of recommendation systems. Pearson correlation can be used to
 construct an item-item similarity matrix.
 | Time Decay
@@ -406,7 +406,7 @@ A system which outputs the candidates to be ranked. This is sometimes referred t
 | Embedding Space 1
 The n-dimensional space where embeddings exist. Typically, the embedding space can be used to generate the top-k candidates by
 using the k-nearest neighbors algorithm. §
-| cosine similarity @) |
+| cosine similarity @ |
 A similarity metric which is equal to the cosine of the angle between two inputs in some embedding space.
 | Linear Activation
 A symmetric activation function which assigns the output as the value of the input.
@@ -432,3 +432,4 @@ Biases found within ranking which arise from the placement of items within a ran
 - Code implementation from scratch
 
 
+**
