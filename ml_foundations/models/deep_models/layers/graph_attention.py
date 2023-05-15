@@ -28,7 +28,7 @@ class GraphAttentionLayer(nn.Module):
         self.softmax = nn.Softmax(dim=1)
         self.dropout = nn.Dropout(dropout)
 
-    def forward(self, h: torch.Tensor, adj_mat: torch.Tensor):
+    def forward(self, h: torch.Tensor, adj_mat: torch.Tensor): # h (n_nodes, in_features), adj_mat (n_heads, n_heads, n_heads) or (n_heads, n_heads, 1)
         n_nodes = h.shape[0]
         g = self.linear(h.view(n_nodes, self.n_heads, self.n_hidden))
         g_repeat = g.repeat(n_nodes, 1, 1)
