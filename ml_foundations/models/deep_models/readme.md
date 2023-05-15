@@ -1,6 +1,6 @@
 # Deep Learning
 
-- NN
-- CNN
-- RNN
-- GAN
+## Layers
+- [x] Graph Attention
+
+## Models
