@@ -36,13 +36,13 @@ class GraphAttentionLayer(nn.Module):
         )  # for each head we do linear transformation
         g_repeat = g.repeat(
             n_nodes, 1, 1
-        )  # repeats (stack) along the dim 0 [g1, g2, .....gn, g1, g2, ...] (n_nodes*n_nodes, n_heads, n_hodden)
+        )  # repeats (stack) along the dim 0 [g1, g2, .....gn, g1, g2, ...] (n_nodes*n_nodes, n_heads, n_hidden)
         g_repeat_interleave = g.repeat_interleave(
             g_repeat, dim=0
-        )  # the same nodes gets together [g1, g1, ......gn, gn]  (n_nodes*n_nodes, n_heads, n_hodden)
+        )  # the same nodes gets together [g1, g1, ......gn, gn]  (n_nodes*n_nodes, n_heads, n_hidden)
         g_concat = torch.cat(
             [g_repeat_interleave, g_repeat], dim=-1
-        )  # concats to make pairs (g1, g1), (g1, g2).....(n_nodes*n_nodes, n_heads, 2*n_hodden)
+        )  # concats to make pairs (g1, g1), (g1, g2).....(n_nodes*n_nodes, n_heads, 2*n_hidden)
         g_concat = g_concat.view(n_nodes, n_nodes, self.n_heads, 2 * self.n_hidden)
         e = self.activation(self.attn(g_concat))
         e = e.squeeze(-1)  # (n_nodes, n_nodes, n_heads)
