@@ -7,6 +7,7 @@ class SpatialTransformer(nn.Module):
   def __init__(self, channels: int, n_heads: int, n_layers: int, d_cond: int):
     super().__init__()
     self.norm = torch.nn.GroupNorm(num_groups=32, num_channels=channels, eps=1e-6, affine=True)
+    self.proj_in = nn.Conv2d()
     self.transformer_blocks = nn.ModuleList()
     self.proj_out = nn.Conv2d()
     
@@ -16,6 +17,3 @@ class SpatialTransformer(nn.Module):
     x_in = x
     x = self.norm(x)
     x = self.proj_in(x)
-    
-    
-    
