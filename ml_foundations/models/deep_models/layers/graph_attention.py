@@ -28,16 +28,24 @@ class GraphAttentionLayer(nn.Module):
         self.softmax = nn.Softmax(dim=1)
         self.dropout = nn.Dropout(dropout)
 
-    def forward(self, h: torch.Tensor, adj_mat: torch.Tensor): 
+    def forward(self, h: torch.Tensor, adj_mat: torch.Tensor):
         # h (n_nodes, in_features), adj_mat (n_heads, n_heads, n_heads) or (n_heads, n_heads, 1) when adj_mat is  same for all heads
         n_nodes = h.shape[0]
-        g = self.linear(h).view(n_nodes, self.n_heads, self.n_hidden) # for each head we do linear transformation
-        g_repeat = g.repeat(n_nodes, 1, 1) # repeats (stack) along the dim 0 [g1, g2, .....gn, g1, g2, ...] (n_nodes*n_nodes, n_heads, n_hodden)
-        g_repeat_interleave = g.repeat_interleave(g_repeat, dim=0) # the same nodes gets together [g1, g1, ......gn, gn]  (n_nodes*n_nodes, n_heads, n_hodden)
-        g_concat = torch.cat([g_repeat_interleave, g_repeat], dim=-1) # concats to make pairs (g1, g1), (g1, g2).....(n_nodes*n_nodes, n_heads, 2*n_hodden)
+        g = self.linear(h).view(
+            n_nodes, self.n_heads, self.n_hidden
+        )  # for each head we do linear transformation
+        g_repeat = g.repeat(
+            n_nodes, 1, 1
+        )  # repeats (stack) along the dim 0 [g1, g2, .....gn, g1, g2, ...] (n_nodes*n_nodes, n_heads, n_hodden)
+        g_repeat_interleave = g.repeat_interleave(
+            g_repeat, dim=0
+        )  # the same nodes gets together [g1, g1, ......gn, gn]  (n_nodes*n_nodes, n_heads, n_hodden)
+        g_concat = torch.cat(
+            [g_repeat_interleave, g_repeat], dim=-1
+        )  # concats to make pairs (g1, g1), (g1, g2).....(n_nodes*n_nodes, n_heads, 2*n_hodden)
         g_concat = g_concat.view(n_nodes, n_nodes, self.n_heads, 2 * self.n_hidden)
         e = self.activation(self.attn(g_concat))
-        e = e.squeeze(-1) # (n_nodes, n_nodes, n_heads)
+        e = e.squeeze(-1)  # (n_nodes, n_nodes, n_heads)
 
         assert adj_mat.shape[0] == 1 or adj_mat.shape[0] == n_nodes
         assert adj_mat.shape[1] == 1 or adj_mat.shape[1] == n_nodes
