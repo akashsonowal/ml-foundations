@@ -51,7 +51,12 @@ class CoraDataset:
     ids_to_idx = {id_: i for i, id_ in enumerate(paper_ids)}
     self.adj_mat = torch.eye(len(self.labels), dtype=torch.bool)
     
-
+    if self.include_edges:
+      for e in citations:
+        e1, e2 = ids_to_idx[e[0]], ids_to_idx[e[1]]
+        self.adj_mat[e1][e2] = True
+        self.adj_mat[e2][e1] = True
+        
 class GAT():
   def __init__(self, in_features: int, n_hidden: int, n_classes: int, n_heads: int, dropout: float):
     super().__init__()
