@@ -7,7 +7,7 @@ from torch import nn
 import urllib.request
 import tarfile
 
-from ...models.deep_models.layers import GraphAttentionLayer
+from ml_foundations.models.deep_models.layers import GraphAttentionLayer
 
 
 class CoraDataset:
