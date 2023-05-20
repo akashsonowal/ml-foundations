@@ -44,7 +44,7 @@ class GraphAttentionLayer(nn.Module):
             [g_repeat_interleave, g_repeat], dim=-1
         )  # concats to make pairs (g1, g1), (g1, g2).....(n_nodes*n_nodes, n_heads, 2*n_hidden)
         g_concat = g_concat.view(n_nodes, n_nodes, self.n_heads, 2 * self.n_hidden)
-        e = self.activation(self.attn(g_concat))
+        e = self.activation(self.attn(g_concat)) #(n_nodes, n_nodes, n_heads, 1)
         e = e.squeeze(-1)  # (n_nodes, n_nodes, n_heads)
 
         assert adj_mat.shape[0] == 1 or adj_mat.shape[0] == n_nodes
