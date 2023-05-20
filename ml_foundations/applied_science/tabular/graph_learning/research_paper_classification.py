@@ -10,6 +10,18 @@ import tarfile
 from ml_foundations.models.deep_models.layers import GraphAttentionLayer
 
 class CoraDataset:
+  """
+  content [
+            ['31336' '0' '0' ... '0' '0' 'Neural_Networks'],
+            ['1061127' '0' '0' ... '0' '0' 'Rule_Learning'], 
+            ...
+          ]
+  citations [
+              [35    1033]
+              [35  103482]
+              ...
+            ]
+  """
   labels: torch.Tensor
   classes: Dict[str, int]
   features: torch.Tensor
