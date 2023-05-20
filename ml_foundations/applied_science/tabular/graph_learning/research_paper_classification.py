@@ -17,7 +17,7 @@ class CoraDataset:
 
   @staticmethod
   def _download():
-    data_dir = './data/cora'
+    data_dir = './data/'
     if not os.path.exists(data_dir):
       os.makedirs(data_dir)
       url = 'https://linqs-data.soe.ucsc.edu/public/lbc/cora.tgz'
@@ -29,6 +29,11 @@ class CoraDataset:
   def __init__(self, include_edges: bool = True):
     self.include_edges = include_edges
     self._download()
+    content = np.genfromtxt('./data/cora/cora.content', dtype=str)
+    citations = np.genfromtxt('./data/cora/cora.citations', dtype=np.int32)
+    features = torch.Tensor(content[:, 1:-1], dtype=torch.float32)
+    self.features = features / features.sum(dim=1, keepdim=True)
+    
 
 class GAT():
   def __init__(self, in_features: int, n_hidden: int, n_classes: int, n_heads: int, dropout: float):
