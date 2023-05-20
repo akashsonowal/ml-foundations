@@ -62,7 +62,7 @@ class CoraDataset:
                 self.adj_mat[e2][e1] = True
 
 
-class GAT:
+class GAT(nn.Module):
     def __init__(
         self,
         in_features: int,
