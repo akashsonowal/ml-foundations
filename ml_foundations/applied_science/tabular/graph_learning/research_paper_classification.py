@@ -3,6 +3,8 @@ import typing import Dict
 import numpy as np
 import torch
 from torch import nn
+import urllib.request
+import tarfile
 
 from ml_foundations.models.deep_models.layers import GraphAttentionLayer
 
@@ -15,6 +17,11 @@ class CoraDataset:
 
   @staticmethod
   def _download():
+    data_dir = './data/cora'
+    if not os.path.exists(data_dir):
+      os.makedirs(data_dir)
+      url = 'https://linqs-data.soe.ucsc.edu/public/lbc/cora.tgz'
+      
     pass
 
   def __init__(self, include_edges: bool = True):
