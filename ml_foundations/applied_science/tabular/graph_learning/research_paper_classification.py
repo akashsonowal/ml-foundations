@@ -47,6 +47,9 @@ class CoraDataset:
     self.features = features / features.sum(dim=1, keepdim=True)
     self.classes = {s: i for i, s in enumerate(set(content[:, -1]))}
     self.labels = torch.tensor([self.classes[i] for i in content[:, -1]], dtype=torch.long)
+    paper_ids = np.array(content[:, 0], dtype=np.int32)
+    ids_to_idx = {id_: i for i, id_ in enumerate(paper_ids)}
+    self.adj_mat = torch.eye(len(self.labels), dtype=torch.bool)
     
 
 class GAT():
