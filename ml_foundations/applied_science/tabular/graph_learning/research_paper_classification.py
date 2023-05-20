@@ -71,7 +71,10 @@ class GAT():
     x = self.activation(x)
     x = self.dropout(x)
     return self.output(x, adj_mat) 
-  
+
+def accuracy(output: torch.Tensor, labels: torch.Tensor):
+  return output.argmax(dim=-1).eq(labels).sum().item() / len(labels)
+
 def main():
   device = "gpu" if torch.cuda.is_available() else "cpu"
   dataset = CoraDataset(include_edges=True)
@@ -96,20 +99,13 @@ def main():
     loss = loss_func(output[idx_train], labels[idx_train])
     loss.backward()
     optimizer.step()
+    train_accuracy = accuracy(output[idx_train], labels[idx_train]) 
     
     model.eval()
     with torch.no_grad():
-       output = model(features, edges_ad)
-       loss = 
-        loss
+      output = model(features, edges_ad)
+      val_loss = loss_func(output[idx_valid], labels[idx_valid])
+      val_accuracy = accuracy(output[idx_valid], labels[idx_valid]) 
     
-    
-  
-  
-  
-  
-  
-  pass
-
 if __name__ == "__main__":
   main()
