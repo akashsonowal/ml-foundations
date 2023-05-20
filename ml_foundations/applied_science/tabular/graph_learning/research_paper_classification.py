@@ -29,10 +29,12 @@ class CoraDataset:
   def __init__(self, include_edges: bool = True):
     self.include_edges = include_edges
     self._download()
-    content = np.genfromtxt('./data/cora/cora.content', dtype=str)
-    citations = np.genfromtxt('./data/cora/cora.citations', dtype=np.int32)
-    features = torch.Tensor(content[:, 1:-1], dtype=torch.float32)
+    content = np.genfromtxt('./data/cora/cora.content', dtype=np.dtype(str))
+    citations = np.genfromtxt('./data/cora/cora.cites', dtype=np.int32)
+    features = torch.Tensor(np.array(content[:, 1:-1], dtype=np.float32))
     self.features = features / features.sum(dim=1, keepdim=True)
+    self.classes = {s: i for i, s in enumerate(set(content[:, -1]))}
+    self.labels = torch.tensor([self.classes[i] for i in content[:, -1]], dtype=torch.long)
     
 
 class GAT():
