@@ -94,7 +94,7 @@ def accuracy(output: torch.Tensor, labels: torch.Tensor):
 
 
 def main():
-    device = "gpu" if torch.cuda.is_available() else "cpu"
+    device = "cuda" if torch.cuda.is_available() else "cpu"
     dataset = CoraDataset(include_edges=True)
     in_features = dataset.features.shape[1]
     n_hidden = 64
