@@ -38,7 +38,7 @@ class GraphAttentionLayer(nn.Module):
             n_nodes, 1, 1
         )  # repeats (stack) along the dim 0 [g1, g2, .....gn, g1, g2, ...] (n_nodes*n_nodes, n_heads, n_hidden)
         g_repeat_interleave = g.repeat_interleave(
-            g_repeat, dim=0
+            n_nodes, dim=0
         )  # the same nodes gets together [g1, g1, ......gn, gn]  (n_nodes*n_nodes, n_heads, n_hidden)
         g_concat = torch.cat(
             [g_repeat_interleave, g_repeat], dim=-1
