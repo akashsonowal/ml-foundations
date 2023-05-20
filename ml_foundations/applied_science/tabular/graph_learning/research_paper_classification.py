@@ -70,9 +70,45 @@ class GAT():
     x = self.layer1(x, adj_mat)
     x = self.activation(x)
     x = self.dropout(x)
-    return self.output(x, adj_mat)
-
+    return self.output(x, adj_mat) 
+  
 def main():
+  device = "gpu" if torch.cuda.is_available() else "cpu"
+  dataset = CoraDataset(include_edges=True)
+  model = GAT(in_features, n_hidden, n_classes, n_heads, dropout).to(device)
+  
+  optimizer = torch.optim.Adam
+  loss_func = nn.CrossEntropyLoss()
+  
+  features = dataset.features.to(device)
+  labels = dataset.labels.to(device)
+  edges_adj = dataset.adj_mat.to(device)
+  edges_adj = edges_adj.unsqueeze(-1) #add a third dim for heads
+  
+  idx_rand = torch.randperm(len(labels))
+  idx_train = idx_rand[:500]
+  idx_valid = idx_rand[500:]
+  
+  for epoch in epochs:
+    model.train()
+    optimizer.zero_grad()
+    output = model(features, edges_ad)
+    loss = loss_func(output[idx_train], labels[idx_train])
+    loss.backward()
+    optimizer.step()
+    
+    model.eval()
+    with torch.no_grad():
+       output = model(features, edges_ad)
+       loss = 
+        loss
+    
+    
+  
+  
+  
+  
+  
   pass
 
 if __name__ == "__main__":
