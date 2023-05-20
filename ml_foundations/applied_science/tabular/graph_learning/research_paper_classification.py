@@ -18,6 +18,10 @@ class CoraDataset:
     pass
 
   def __init__(self, include_edges: bool = True):
+    self.include_edges = include_edges
+    self._download()
+    
+      
     pass
 
 class GAT():
@@ -25,10 +29,15 @@ class GAT():
     super().__init__()
     self.layer1 = GraphAttentionLayer(in_features, n_hidden, n_heads, is_concat=True, dropout=dropout)
     self.activation = nn.ELU()
+    self.output = GraphAttentionLayer(n_hidden, n_classes, 1, is_concat=True, dropout=dropout)
     self.dropout = nn.Dropout(dropout)
 
-  def forward(self):
-    pass
+  def forward(self, x, adj_mat):
+    x = self.dropout(x)
+    x = self.layer1(x, adj_mat)
+    x = self.activation(x)
+    x = self.dropout(x)
+    return self.output(x, adj_mat)
 
 def main():
   pass
