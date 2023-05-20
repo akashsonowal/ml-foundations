@@ -9,7 +9,6 @@ import tarfile
 from ml_foundations.models.deep_models.layers import GraphAttentionLayer
 
 class CoraDataset:
-
   labels: torch.Tensor
   classes: Dict[str, int]
   features: torch.Tensor
@@ -21,15 +20,14 @@ class CoraDataset:
     if not os.path.exists(data_dir):
       os.makedirs(data_dir)
       url = 'https://linqs-data.soe.ucsc.edu/public/lbc/cora.tgz'
-      
-    pass
-
+      filename = 'cora.tgz'
+      urllib.request.urlretrieve(url, os.path.join(data_dir, filename))
+      with tarfile.open(os.path.join(data_dir, filename), 'r:gz') as tar:
+        tar.extractall(data_dir)
+ 
   def __init__(self, include_edges: bool = True):
     self.include_edges = include_edges
     self._download()
-    
-      
-    pass
 
 class GAT():
   def __init__(self, in_features: int, n_hidden: int, n_classes: int, n_heads: int, dropout: float):
