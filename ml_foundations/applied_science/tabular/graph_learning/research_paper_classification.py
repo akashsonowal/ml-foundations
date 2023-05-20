@@ -7,7 +7,7 @@ from torch import nn
 import urllib.request
 import tarfile
 
-from ml_foundations.models.deep_models.layers import GraphAttentionLayer
+from models.deep_models.layers import GraphAttentionLayer
 
 
 class CoraDataset:
@@ -103,7 +103,7 @@ def main():
     dropout = 0.6
     model = GAT(in_features, n_hidden, n_classes, n_heads, dropout).to(device)
     epochs = 1000
-    optimizer = torch.optim.Adam
+    optimizer = torch.optim.Adam(model.parameters(), lr=5e-3)
     loss_func = nn.CrossEntropyLoss()
 
     features = dataset.features.to(device)
@@ -115,7 +115,7 @@ def main():
     idx_train = idx_rand[:500]
     idx_valid = idx_rand[500:]
 
-    for epoch in epochs:
+    for epoch in range(epochs):
         model.train()
         optimizer.zero_grad()
         output = model(features, edges_adj)
@@ -131,7 +131,7 @@ def main():
             val_accuracy = accuracy(output[idx_valid], labels[idx_valid])
 
         print(
-            f"epoch {epoch} / {epochs}, train loss: {loss}, train accuracy: {train_accuracy}, valid loss: {val_loss}, valid accuracy: {val_accuracy}"
+            f"epoch {epoch + 1} / {epochs}, train loss: {loss}, train accuracy: {train_accuracy}, valid loss: {val_loss}, valid accuracy: {val_accuracy}"
         )
 
 
