@@ -78,8 +78,13 @@ def accuracy(output: torch.Tensor, labels: torch.Tensor):
 def main():
   device = "gpu" if torch.cuda.is_available() else "cpu"
   dataset = CoraDataset(include_edges=True)
+  in_features = dataset.features.shape[1]
+  n_hidden = 64
+  n_classes = len(dataset.classes)
+  n_heads = 8
+  dropout = 0.6
   model = GAT(in_features, n_hidden, n_classes, n_heads, dropout).to(device)
-  
+  epochs = 1000
   optimizer = torch.optim.Adam
   loss_func = nn.CrossEntropyLoss()
   
@@ -107,5 +112,6 @@ def main():
       val_loss = loss_func(output[idx_valid], labels[idx_valid])
       val_accuracy = accuracy(output[idx_valid], labels[idx_valid]) 
     
+    print(f"epoch {epoch} / {epochs}, train loss: {loss}, train accuracy: {train_accuracy}, valid loss: {val_loss}, valid accuracy: {val_accuracy}")
 if __name__ == "__main__":
   main()
