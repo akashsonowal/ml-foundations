@@ -1,1 +1,1 @@
-from . import bert
+from .graph_attention import GraphAttentionLayer
