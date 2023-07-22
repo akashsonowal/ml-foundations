@@ -3,7 +3,7 @@ import numpy as np
 class AdaBoost:
     def __init__(self, n_estimators=50):
         self.n_estimators = n_estimators
-        self.alpha = np.zeros(self.n_estimators)
+        self.alpha = np.zeros(self.n_estimators) # defined at tree level
         self.trees = []
     
     def fit(self, X, y):
@@ -20,7 +20,7 @@ class AdaBoost:
                 if prediction != y[i]:
                     error += weights[i]
             
-            self.alpha[t] = 0.5 * np.log((1.0 - error) / max(error, 1e-10))
+            self.alpha[t] = 0.5 * np.log((1.0 - error) / max(error, 1e-10)) # higher alpha means more contributuon of this weak learner
             self.trees.append(tree)
 
             for i in range(self.n_samples):
