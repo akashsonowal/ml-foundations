@@ -9,3 +9,13 @@ class AdaBoost:
     def fit(self, X, y):
         n_samples, n_features = X.shape
         weights = np.ones(n_samples) / n_samples
+
+        for t in range(self.n_estimators):
+            model = DecisionStump()
+    
+    def predict(self, X):
+        predictions = np.zeros(len(X))
+
+        for alpha, tree in zip(self.alpha, self.trees):
+            predictions += alpha * np.array([tree.predict(x) for x in X])
+        return np.sign(predictions)
