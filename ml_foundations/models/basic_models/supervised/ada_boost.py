@@ -3,15 +3,15 @@ import numpy as np
 class AdaBoost:
     def __init__(self, n_estimators=50):
         self.n_estimators = n_estimators
-        self.alpha = np.zeros(self.n_estimators) # defined at tree level
+        self.alpha = [] # defined at tree level
         self.trees = []
     
     def fit(self, X, y):
-        n_samples, n_features = X.shape
-        weights = np.ones(n_samples) / n_samples
+        n_samples = len(X)
+        weights = np.ones(n_samples) / n_samples # sample weights initialize
 
         for t in range(self.n_estimators):
-            tree = DecisionStump()
+            tree = DecisionTreeClassifier()
             error = 0.0
 
             for i in range(self.n_samples):
