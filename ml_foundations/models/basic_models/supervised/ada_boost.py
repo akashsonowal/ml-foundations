@@ -11,7 +11,25 @@ class AdaBoost:
         weights = np.ones(n_samples) / n_samples
 
         for t in range(self.n_estimators):
-            model = DecisionStump()
+            tree = DecisionStump()
+            error = 0.0
+
+            for i in range(self.n_samples):
+                prediction = tree.predict(X[i]) # where is fit?
+
+                if prediction != y[i]:
+                    error += weights[i]
+            
+            self.alpha[t] = 0.5 * np.log((1.0 - error) / max(error, 1e-10))
+            self.trees.append(tree)
+
+            for i in range(self.n_samples):
+                prediction = tree.predict(X[i])
+                exponent = -self.alpha[t] * y[i] * prediction
+                weights[i] = weights[i] * np.exp(exponent)
+            
+            weights /= np.sum(weights)
+
     
     def predict(self, X):
         predictions = np.zeros(len(X))
