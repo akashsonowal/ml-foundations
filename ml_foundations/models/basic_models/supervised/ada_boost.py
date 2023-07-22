@@ -30,7 +30,6 @@ class AdaBoost:
             
             weights /= np.sum(weights)
 
-    
     def predict(self, X):
         predictions = np.zeros(len(X))
 
