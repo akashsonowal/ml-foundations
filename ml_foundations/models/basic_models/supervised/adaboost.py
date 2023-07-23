@@ -3,7 +3,7 @@
 import numpy as np 
 
 # Decision stump used as weak classifier
-class DecisionStump: # single node tree
+class DecisionStump: # tree wih only one best feature split and depth=1
     def __init__(self):
         self.polarity = 1 
         self.feature_idx = None
@@ -30,7 +30,7 @@ class Adaboost:
         n_samples, n_features = X.shape 
 
         # Initialize weights to 1/N for each sample
-        w = np.full(n_samples, (1 / n_samples))
+        w = np.full(n_samples, (1 / n_samples)) # after after tree this gets updated
 
         # Iterate through the classifiers
         for _ in range(self.n_clf):
@@ -63,7 +63,7 @@ class Adaboost:
                         clf.feature_idx = feature_i
                         min_error = error
                     
-            # calculate alphs 
+            # calculate alpha 
             EPS = 1e-10
             clf.alpha = 0.5 * np.log((1.0 - min_error + EPS) / (min_error + EPS))
 
