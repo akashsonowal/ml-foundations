@@ -28,7 +28,10 @@ class Adaboost:
     
     def fit(self, X, y):
         n_samples, n_features = X.shape 
-        
+
+        # Initialize weights to 1/N for each sample
+        w = np.full(n_samples, 1 / n_samples)
+
 
     
 
