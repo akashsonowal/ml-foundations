@@ -29,3 +29,12 @@ class SVM:
     def predict(self, X):
         approx = np.dot(X, self.w) - self.b
         return np.sign(approx) 
+
+if __name__ == "__main__":
+    from sklearn import datasets
+    import matplotlib.pyplot as plt 
+
+    X, y = datasets.make_blobs(n_samples=50, n_features=2, centers=2, cluster_std=1.05, random_state=40)
+
+    y = np.where(y==0, -1, 1)
+    
