@@ -11,4 +11,11 @@ class PCA:
     
     def transform(self):
         pass 
-        
+
+if __name__ == "__main__":
+    from sklearn import datasets 
+
+    data = datasets.load_iris()
+    X = data.data
+    y = data.target 
+          
