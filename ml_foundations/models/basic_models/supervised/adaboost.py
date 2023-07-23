@@ -65,7 +65,7 @@ class Adaboost:
                     
             # calculate alphs 
             EPS = 1e-10
-            clf.alpha = 0.5 * log((1.0 - min_error + EPS) / (min_error + EPS))
+            clf.alpha = 0.5 * np.log((1.0 - min_error + EPS) / (min_error + EPS))
 
             # calculate predictions and update weights
             predictions = clf.predict(X)
