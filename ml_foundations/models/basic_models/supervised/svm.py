@@ -16,7 +16,7 @@ class SVM:
         self.w = np.zeros(n_features)
         self.b = 0
 
-        for _ in range(n_iters):
+        for _ in range(self.n_iters):
             for idx, x_i in enumerate(X):
                 condition = y_[idx] * (np.dot(x_i, self.w) - self.b) >= 1
 
