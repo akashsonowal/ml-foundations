@@ -36,7 +36,13 @@ class Adaboost:
         for _ in range(self.n_clf):
             clf = DecisionStump()
             min_error = float("-Inf")
-            
+
+            # greedy search to find threshold and feature
+            for feature_i in range(n_features):
+                X_column = X[:, feature_i]
+                thresholds = np.unique(X_column)
+                
+
 
 
     
