@@ -8,7 +8,13 @@ class PCA:
     
     def fit(self, X, y):
         self.mean = np.mean(X, axis=0)
-        X = X = self.mean
+        X = X - self.mean
+
+        # covariance, function needs samples as columns
+        cov = np.cov(X.T)
+
+        # eigenvalues, eigenvectors 
+        eigenvalues, eigenvectors = np.linalg.eig(cov)
     
     def transform(self):
         pass 
