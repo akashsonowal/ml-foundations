@@ -1,3 +1,5 @@
+# adopted from https://github.com/patrickloeber/MLfromscratch/blob/master/mlfromscratch/svm.py
+
 import numpy as np
 
 class SVM:
