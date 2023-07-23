@@ -15,6 +15,12 @@ class PCA:
 
         # eigenvalues, eigenvectors 
         eigenvalues, eigenvectors = np.linalg.eig(cov)
+
+        # -> eigenvector v = [:,i] column vector, transpose for easier calculations
+        # sort eigenvectors
+        eigenvectors = eigenvectors.T
+        idxs = np.argsort(eigenvalues)[::-1]
+        
     
     def transform(self):
         pass 
