@@ -1,5 +1,5 @@
 import random
-
+import numpy as np 
 
 class Centroid:
     def __init__(self, location):
