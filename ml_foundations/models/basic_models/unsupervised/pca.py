@@ -25,10 +25,11 @@ class PCA:
         eigenvectors = eigenvectors[idxs]
 
         # store first n eigenvectors
-        self.components = eigenvectors[0 : self.n_components]
+        self.components = eigenvectors[0 : self.n_components] # (n_components, dim)
     
-    def transform(self):
-        pass 
+    def transform(self, X):
+        X = X - self.mean
+        return np.dot(X, self.components.T)  
 
 if __name__ == "__main__":
     from sklearn import datasets 
@@ -36,3 +37,10 @@ if __name__ == "__main__":
     data = datasets.load_iris()
     X = data.data
     y = data.target 
+
+    pca = PCA(2)
+    pca.fit(X)
+    X_projected = pca.transform(X)
+
+    print("Shape of X:", X.shape)
+    print("Shape of transformed X:", X_projected.shape)
