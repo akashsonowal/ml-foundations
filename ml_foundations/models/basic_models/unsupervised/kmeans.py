@@ -1,6 +1,9 @@
 import random
 import numpy as np 
 
+class KMeans:
+    pass
+
 class Centroid:
     def __init__(self, location):
         self.location = location
