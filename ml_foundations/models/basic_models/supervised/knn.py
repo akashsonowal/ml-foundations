@@ -1,5 +1,8 @@
 import math
 
+class KNN:
+    pass 
+
 
 def predict_label(examples, features, k, label_key="is_intrusive"):
     k_nearest_neighbors = find_k_nearest_neighbors(examples, features, k)
