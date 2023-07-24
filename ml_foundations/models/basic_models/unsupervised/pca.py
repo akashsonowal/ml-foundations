@@ -6,7 +6,7 @@ class PCA:
         self.components = None 
         self.mean = None 
     
-    def fit(self, X, y):
+    def fit(self, X):
         self.mean = np.mean(X, axis=0)
         X = X - self.mean
 
