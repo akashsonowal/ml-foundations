@@ -22,7 +22,7 @@ print(scores_dict)
 p1 = random.choice(all_permutations)
 print(p1)
 
-obj_pos_1, obj_pos_2, obj_pos_3 = pi
+obj_pos_1, obj_pos_2, obj_pos_3 = p1
 
 print(f"object at position 1 is '{obj_pos_1}'")
 print(f"object at position 2 is '{obj_pos_2}'")
@@ -44,7 +44,11 @@ print(f"second term is {second_term}")
 
 third_term = 1.0
 
+prob_of_permutation = first_term * second_term * third_term
 
+print(f"probability of permutation is {prob_of_permutation}")
+
+np.exp(scores_dict['shirt']) / sum(np.exp(list(scores_dict.values())))
 
 
 
