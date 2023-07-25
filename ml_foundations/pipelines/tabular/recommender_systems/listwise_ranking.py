@@ -52,10 +52,44 @@ prob_of_permutation = first_term * second_term * third_term
 
 print(f"probability of permutation is {prob_of_permutation}")
 
-np.exp(scores_dict['shirt']) / sum(np.exp(list(scores_dict.values())))
+top_1_shirt_prob = np.exp(scores_dict['shirt']) / sum(np.exp(list(scores_dict.values())))
 
+ordered_scores = np.array([scores_dict[x] for x in xlabs]).astype(np.float32)
+predicted_prob_dist = tf.nn.softmax(ordered_scores)
 
+print(predicted_prob_dist)
 
+raw_relevance_grades = tf.constant([3.0, 1.0, 0.0], dtype=tf.float32)
+true_prob_dist = tf.nn.softmax(raw_relevance_grades)
+
+print(true_prob_dist)
+
+kl_div = sum(true_prob_dist * np.log(true_prob_dist / predicted_prob_dist))
+
+query_1 = "dog"
+
+bing_search_results = [
+    "Dog - Wikipedia",
+    "Adopting a dog or puppy | RSPCA Australia",
+    "dog | History, Domestication, Physical Traits, & Breeds",
+    "New South Wales | Dogs & Puppies | Gumtree Australia Free",
+    "dog - Wiktionary"
+]
+
+query_2 = "what is a dog"
+
+google_search_results = [
+    "Dog - Wikipedia",
+    "Dog - Simple English Wikipedia, the free encyclopedia",
+    "Dog | National Geographic",
+    "dog | History, Domestication, Physical Traits, & Breeds",
+    "What is a Dog | Facts About Dogs | DK Find Out"
+]
+
+relevance_grades = tf.constant([
+    [3.0, 2.0, 2.0, 2.0, 1.0],
+    [3.0, 3.0, 1.0, 1.0, 0.0]
+])
 
 
 
