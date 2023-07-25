@@ -1,3 +1,17 @@
+# Implicit feedback
+# Pointwise loss
+
+# Pair wise loss (RankNet)
+# For each user consider a pair of items and order that pair
+# - Bayesian personalised ranking loss
+# - hinge loss
+
+# Listwise loss (LambdaMART)
+# It optimizes the ordering of entire list of itens
+# - Normalized Discounted Cumulative Gain (NDCG)
+
+"""NDCG is used in listwise ranking"""
+
 - how to predict the rating a user might give to a prospective item
 - how to generate a recommendation list of items0
 - how to predict the click-through rate from abundant features.

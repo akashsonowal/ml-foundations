@@ -1,17 +1,40 @@
-# Implicit feedback
-# Pointwise loss
+import random
+random.seed(1)
 
-# Pair wise loss (RankNet)
-# For each user consider a pair of items and order that pair
-# - Bayesian personalised ranking loss
-# - hinge loss
+import numpy as np 
+np.random.seed(1)
 
-# Listwise loss (LambdaMART)
-# It optimizes the ordering of entire list of itens
-# - Normalized Discounted Cumulative Gain (NDCG)
+import itertools 
+import matplotlib.pyplot as plt 
+plt.style.use("ggplot")
 
-"""NDCG is used in listwise ranking"""
+import tensorflow as tf 
 
-class LambdaMART:
+
+objects_to_rank = {'dress', 'shirts', 'pants'}
+all_permutations = list(itertools.permutations(objects_to_rank))
+for x in sorted(all_permutations):
+    print(x)
+
+scores_dict = {x: np.random.randn(1)[0] for x in ['shirt', 'pants', 'dress']}  
+print(scores_dict)
+
+p1 = random.choice(all_permutations)
+print(p1)
+
+obj_pos_1, obj_pos_2, obj_pos_3 = pi
+
+print(f"object at position 1 is '{obj_pos_1}'")
+print(f"object at position 2 is '{obj_pos_2}'")
+print(f"object at position 3 is '{obj_pos_3}'")
+
+
+
+
+
+
+
+
+class ListNet:
     def __init__(self, )
 
