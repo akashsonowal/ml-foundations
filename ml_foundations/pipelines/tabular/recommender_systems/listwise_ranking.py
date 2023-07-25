@@ -28,6 +28,10 @@ print(f"object at position 1 is '{obj_pos_1}'")
 print(f"object at position 2 is '{obj_pos_2}'")
 print(f"object at position 3 is '{obj_pos_3}'")
 
+score_obj_pos_1 = scores_dict[obj_pos_1]
+score_obj_pos_2 = scores_dict[obj_pos_2]
+score_obj_pos_3 = scores_dict[obj_pos_3]
+
 first_term_numerator = np.exp(score_obj_pos_1)
 first_term_denominator = np.exp(score_obj_pos_1) + np.exp(score_obj_pos_2) + np.exp(score_obj_pos_3)
 
