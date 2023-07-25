@@ -243,12 +243,5 @@ hist = model.fit(
     verbose=False
 )
 
-
-
-
-
-
-
 class ListNet:
     def __init__(self, )
-
