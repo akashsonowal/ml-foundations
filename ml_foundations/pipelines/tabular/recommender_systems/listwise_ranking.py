@@ -28,6 +28,24 @@ print(f"object at position 1 is '{obj_pos_1}'")
 print(f"object at position 2 is '{obj_pos_2}'")
 print(f"object at position 3 is '{obj_pos_3}'")
 
+first_term_numerator = np.exp(score_obj_pos_1)
+first_term_denominator = np.exp(score_obj_pos_1) + np.exp(score_obj_pos_2) + np.exp(score_obj_pos_3)
+
+first_term = first_term_numerator / first_term_denominator
+
+print(f"first term is {first_term}")
+
+second_term_numerator = np.exp(score_obj_pos_2)
+second_term_denominator = np.exp(score_obj_pos_2) + np.exp(score_obj_pos_3)
+
+second_term = second_term_numerator / second_term_denominator
+
+print(f"second term is {second_term}")
+
+third_term = 1.0
+
+
+
 
 
 
