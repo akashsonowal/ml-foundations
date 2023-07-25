@@ -1,3 +1,5 @@
+# listnet ranking adopted from https://embracingtherandom.com/machine-learning/tensorflow/ranking/deep-learning/learning-to-rank-part-2/
+
 import random
 random.seed(1)
 
