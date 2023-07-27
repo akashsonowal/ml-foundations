@@ -10,7 +10,7 @@ class SVD:
         # It's not necessary to compute the full matrix of U or V as we are interested till rank of original data
         
         if self.n_components is not None:
-            U = U[:, self.n_components]
+            U = U[:, : self.n_components]
             sigma = sigma[ : self.n_components]
 
         X_svd = np.dot(U, np.diag(sigma, ))
