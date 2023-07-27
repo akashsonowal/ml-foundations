@@ -36,6 +36,8 @@ if __name__ == "__main__":
 
     svd = SVD(2)
     X_projected = svd.fit_transform(X)
+    X_approxed = svd.rank_approximate(X)
 
     print("Shape of X:", X.shape)
     print("Shape of transformed X:", X_projected.shape)
+    print("Shape of transformed X:", X_approxed.shape)
