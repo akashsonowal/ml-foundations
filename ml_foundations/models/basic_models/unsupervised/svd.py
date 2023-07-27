@@ -34,7 +34,7 @@ if __name__ == "__main__":
     X = data.data
     y = data.target 
 
-    svd = SVD(2)
+    svd = SVD(2, 3)
     X_projected = svd.fit_transform(X)
     X_approxed = svd.rank_approximate(X)
 
