@@ -40,4 +40,4 @@ if __name__ == "__main__":
 
     print("Shape of X:", X.shape)
     print("Shape of transformed X:", X_projected.shape)
-    print("Shape of transformed X:", X_approxed.shape)
+    print("Shape of rank-approxed X:", X_approxed.shape)
