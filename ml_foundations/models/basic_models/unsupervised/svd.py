@@ -21,11 +21,11 @@ class SVD:
         U, sigma, Vh = np.linalg.svd(X, full_matrices=True, compute_uv=True) 
 
         if self.rank is not None:
-            U = U[:, self.rank]
-            sigma = sigma[self.rank]
-            Vh = Vh[self.rank, :]
+            U = U[:, self.rank].reshape(-1, 1)
+            sigma = sigma[self.rank].reshape(1, -1)
+            Vh = Vh[self.rank, :].reshape(1, -1)
         
-        X_approxed = np.dot(U, np.dot(sigma, Vh))
+        X_approxed = np.matmul(U, np.matmul(sigma, Vh))
         return X_approxed
 
 if __name__ == "__main__":
