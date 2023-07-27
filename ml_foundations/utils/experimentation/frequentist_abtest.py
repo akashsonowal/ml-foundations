@@ -4,8 +4,8 @@ def calculate_ctr(clicks, impressions):
     return clicks / impressions
 
 def perform_ab_test(clicks_A, impressions_A, clicks_B, impressions_B):
-    ctr_A = calculate_ctr(clicks_A, impressions_A)
-    ctr_B = calculate_ctr(clicks_B, impressions_B)
+    ctr_A = calculate_ctr(clicks_A, impressions_A) # ctr prob a
+    ctr_B = calculate_ctr(clicks_B, impressions_B) # ctr prob b
 
     # Assuming clicks and impressions follow a binomial distribution
     # Calculate the standard error for each group
