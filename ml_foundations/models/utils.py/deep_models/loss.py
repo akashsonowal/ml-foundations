@@ -1,3 +1,4 @@
+# https://gist.github.com/awni/56369a90d03953e370f3964c826ed4b0
 import torch 
 
 class CTCLoss:
