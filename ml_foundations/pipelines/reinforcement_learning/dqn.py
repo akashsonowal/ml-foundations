@@ -17,5 +17,26 @@ from IPython.display import clear_output
 import matplotlib.pyplot as plt 
 %matplotlib inline 
 
+class ReplayBuffer(object):
+    pass 
 
+class DQN(nn.Module):
+    def __init__(self):
+        pass 
+    
+    def forward(self):
+        pass 
+
+    def act(self):
+        pass 
+
+def compute_td_loss():
+    pass 
+
+if __name__ == "__main__":
+    # cartpole environment
+    env_id = "CartPole-v0"
+    env = gym.make(env_id)
+
+    #
 
