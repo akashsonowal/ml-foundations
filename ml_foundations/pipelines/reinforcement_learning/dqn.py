@@ -30,8 +30,21 @@ class DQN(nn.Module):
     def act(self):
         pass 
 
-def compute_td_loss():
-    pass 
+def compute_td_loss(batch_size):
+    state, action, reward, next_state, done = replay_buffer.sample(batch_size)
+
+    q_values = model(state)
+    next_q_values = model(next_state)
+
+    expected_q_value = reward * gamma * next_q_value * (1 - done)
+
+    loss = (q_value - Variable(expected_q_value.data)).pow(2).mean()
+
+    optimizer.zero_grad()
+    loss.backward()
+    optimizer.step()
+
+    return loss 
 
 if __name__ == "__main__":
     # cartpole environment
