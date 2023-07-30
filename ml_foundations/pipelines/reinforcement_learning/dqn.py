@@ -54,7 +54,7 @@ class DQN(nn.Module):
         if random.random() > epsilon:
             state = Variable(torch.FloatTensor(state).unsqueeze(0), volatile=True)
             q_value = self.forward(state) # (1, 2)
-            action = q_value.max(1)[1].data[0]
+            action = q_value.max(1)[1].data[0] #max(dim).[idx]
         else:
             action = random.randrange(env.action_space.n)
         return action  
@@ -62,14 +62,14 @@ class DQN(nn.Module):
 def compute_td_loss(batch_size):
     state, action, reward, next_state, done = replay_buffer.sample(batch_size)
 
-    state      = Variable(torch.FloatTensor(np.float32(state)))
-    next_state = Variable(torch.FloatTensor(np.float32(next_state)), volatile=True)
-    action     = Variable(torch.LongTensor(action))
-    reward     = Variable(torch.FloatTensor(reward))
-    done       = Variable(torch.FloatTensor(done))
+    state      = Variable(torch.FloatTensor(np.float32(state)))  # (batch_size, 1, 4)
+    next_state = Variable(torch.FloatTensor(np.float32(next_state)), volatile=True) # (batch_size, 1, 4)
+    action     = Variable(torch.LongTensor(action)) # (batch_size, )
+    reward     = Variable(torch.FloatTensor(reward)) # (batch_size, )
+    done       = Variable(torch.FloatTensor(done)) # (batch_size, )
 
-    q_values = model(state)
-    next_q_values = model(next_state)
+    q_values = model(state) # (batch_size, 1, 2)
+    next_q_values = model(next_state) # (batch_size, 1, 2)
 
     q_value          = q_values.gather(1, action.unsqueeze(1)).squeeze(1)
     next_q_value     = next_q_values.max(1)[0]
@@ -144,7 +144,7 @@ if __name__ == "__main__":
             all_rewards.append(episode_reward)
             episode_reward = 0
         
-        if len(replay_buffer) > batch_size:
+        if len(replay_buffer) > batch_size: # collect enough data to train the model
             loss = compute_td_loss(batch_size)
             losses.append(loss.data[0])
             
