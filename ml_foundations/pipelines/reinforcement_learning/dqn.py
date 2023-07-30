@@ -36,8 +36,13 @@ class ReplayBuffer(object):
         return len(self.buffer)
 
 class DQN(nn.Module):
-    def __init__(self):
-        pass 
+    def __init__(self, num_inputs, num_actions):
+        super(DQN, self).__init__()
+
+        self.layers = nn.Sequential(
+            nn.Linear(env.observation_space.shape[0], 128),
+            
+        )
     
     def forward(self):
         pass 
@@ -77,5 +82,5 @@ if __name__ == "__main__":
 
     plt.plot([epsilon_by_frame(i) for i in range(10000)])
 
-    
+
 
