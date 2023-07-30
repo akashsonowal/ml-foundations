@@ -52,7 +52,7 @@ class DQN(nn.Module):
 
     def act(self, state, epsilon):
         if random.random() > epsilon:
-            state = Variable(torch.FloatTensor(state).unqueeze(0), volatile=True)
+            state = Variable(torch.FloatTensor(state).unsqueeze(0), volatile=True)
             q_value = self.forward(state)
             action = q_value.max(1)[1].data[0]
         else:
