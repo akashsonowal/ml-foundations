@@ -112,7 +112,8 @@ if __name__ == "__main__":
 
     model = DQN(env.observation_space.shape[0], env.action_space.n)
     # env observation space 4 is (cart's position, cart's velocity, pole's angle with vertical, pole angular velocity)
-
+    # action space: 2 (move cart left or right)
+    
     if USE_CUDA:
         model = model.cuda()
     
