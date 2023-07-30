@@ -17,11 +17,11 @@ from IPython.display import clear_output
 import matplotlib.pyplot as plt 
 %matplotlib inline 
 
-from collections import dequeue
+from collections import deque
 
 class ReplayBuffer(object):
     def __init__(self, capacity):
-        self.buffer = dequeue(maxlen=capacity)
+        self.buffer = deque(maxlen=capacity)
     
     def push(self, state, action, reward, next_state, done):
         state = np.expand_dims(state, 0)
@@ -113,7 +113,7 @@ if __name__ == "__main__":
     model = DQN(env.observation_space.shape[0], env.action_space.n)
     # env observation space 4 is (cart's position, cart's velocity, pole's angle with vertical, pole angular velocity)
     # action space: 2 (move cart left or right)
-    
+
     if USE_CUDA:
         model = model.cuda()
     
