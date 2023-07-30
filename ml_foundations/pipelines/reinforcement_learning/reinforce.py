@@ -76,13 +76,13 @@ def reinforce(policy, optimizer, n_training_episodes, max_t, gamma, print_every)
     # Help us to calculate the score during the training
     scores_deque = deque(maxlen=100)
     scores = []
-    # Line 3 of pseudocode
+
     for i_episode in range(1, n_training_episodes + 1):
         saved_log_probs = []
         rewards = []
         state = env.reset()
-        # Line 4 of pseudocode
-        for t in range(max_t):
+
+        for t in range(max_t): # for each episode
             action, log_prob = policy.act(state)
             saved_log_probs.append(log_prob)
             state, reward, done, _ = env.step(action)
@@ -92,9 +92,10 @@ def reinforce(policy, optimizer, n_training_episodes, max_t, gamma, print_every)
         scores_deque.append(sum(rewards))
         scores.append(sum(rewards))
 
-        # Line 6 of pseudocode: calculate the return
+        # calculate the return
         returns = deque(maxlen=max_t)
         n_steps = len(rewards)
+        
         # Compute the discounted returns at each timestep,
         # as
         #      the sum of the gamma-discounted return at time t (G_t) + the reward at time t
