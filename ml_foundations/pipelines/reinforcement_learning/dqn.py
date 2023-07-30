@@ -41,11 +41,14 @@ class DQN(nn.Module):
 
         self.layers = nn.Sequential(
             nn.Linear(env.observation_space.shape[0], 128),
-            
+            nn.ReLU(),
+            nn.Linear(128, 128),
+            nn.ReLU(),
+            nn.Linear(128, env.action_space.n)
         )
     
-    def forward(self):
-        pass 
+    def forward(self, x):
+        return self.layers(x)
 
     def act(self):
         pass 
