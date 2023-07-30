@@ -50,8 +50,11 @@ class DQN(nn.Module):
     def forward(self, x):
         return self.layers(x)
 
-    def act(self):
-        pass 
+    def act(self, state, epsilon):
+        if random.random() > epsilon:
+            state = Variable(torch.FloatTensor(state).unqueeze(0), volatile=True)
+            q_value = self.forward(state)
+        return action  
 
 def compute_td_loss(batch_size):
     state, action, reward, next_state, done = replay_buffer.sample(batch_size)
