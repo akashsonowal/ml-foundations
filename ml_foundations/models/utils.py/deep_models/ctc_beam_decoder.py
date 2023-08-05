@@ -10,9 +10,13 @@ def make_new_beam():
 
 def logsumexp(*args):
     """
-    Stable log sum exp.
+    Stable log sum exp. (for numerical stability)
     """
-    
+    if all(a == NEG_INF for a in args):
+        return NEG_INF
+    a_max = max(args)
+
+
 
 def ctc_beam_decode(probs, beam_size=100, blank=0):
     """
