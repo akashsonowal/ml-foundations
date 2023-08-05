@@ -35,7 +35,14 @@ def ctc_beam_decode(probs, beam_size=100, blank=0):
             # The variables p_b and p_nb are respectively the
             # probabilities for the prefix given that it ends in a
             # blank and does not end in a blank at this time step.
-            
+            for prefix, (p_b, p_nb) in beam: # loop over beam
+                # If we propose a blank the prefix doesn't change.
+                # Only the probability of ending in blank gets updated.
+                if s == blank:
+                    n_p_b, n_p_nb = next_beam[prefix]
+                    
+
+
 
 
     
