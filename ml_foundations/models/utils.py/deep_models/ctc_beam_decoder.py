@@ -20,6 +20,8 @@ def ctc_beam_decode(probs, beam_size=100, blank=0):
     # Elements in the beam are (prefix, (p_blank, p_no_blank))
     # Initialize the beam with the empty sequence, a probability of
     # 1 for ending in blank and zero for ending in non-blank (in log space).
+    beam = [(tuple(), (0.0, NEG_INF))]
+    
     
 
 
