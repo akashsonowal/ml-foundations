@@ -14,7 +14,7 @@ def ctc_decode(probs, beam_size=100, blank=0):
         blank (int): Index of the CTC blank label.
     Returns the output label sequence and the corresponding negative
     log-likelihood estimated by the decoder.
-"""
+    """
     pass
 
 
