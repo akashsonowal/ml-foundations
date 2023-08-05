@@ -18,4 +18,4 @@ if __name__ == "__main__":
     probs = probs / np.sum(probs, axis=1, keepdims=True)
 
     labels, score = ctc_decode(probs)
-    print(f"Score {score}:.3f")
+    print(f"Score {score :.3f}")
