@@ -30,6 +30,13 @@ def ctc_beam_decode(probs, beam_size=100, blank=0):
         # A default dictionary to store the next step candidates.
         next_beam = make_new_beam()
 
+        for s in range(S): # loop over vocab
+            p = probs[t, s]
+            # The variables p_b and p_nb are respectively the
+            # probabilities for the prefix given that it ends in a
+            # blank and does not end in a blank at this time step.
+            
+
 
     
 
