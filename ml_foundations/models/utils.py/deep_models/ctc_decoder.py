@@ -4,7 +4,17 @@ import collections
 
 NEG_INF = -float("-inf")
 
-def ctc_decode(probs), beam_size=100, blank=0:
+def ctc_decode(probs, beam_size=100, blank=0):
+     """
+    Performs inference for the given output probabilities.
+    Arguments:
+        probs: The output probabilities (e.g. post-softmax) for each
+            time step. Should be an array of shape (time x output dim).
+        beam_size (int): Size of the beam to use during inference.
+        blank (int): Index of the CTC blank label.
+    Returns the output label sequence and the corresponding negative
+    log-likelihood estimated by the decoder.
+"""
     pass
 
 
