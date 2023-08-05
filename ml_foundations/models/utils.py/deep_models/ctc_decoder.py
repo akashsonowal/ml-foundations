@@ -4,6 +4,8 @@ import collections
 
 NEG_INF = -float("-inf")
 
+def ctc_decode(probs), beam_size=100, blank=0:
+    pass
 
 
 
