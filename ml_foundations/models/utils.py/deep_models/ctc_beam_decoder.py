@@ -4,7 +4,7 @@ import collections
 
 NEG_INF = -float("-inf")
 
-def ctc_decode(probs, beam_size=100, blank=0):
+def ctc_beam_decode(probs, beam_size=100, blank=0):
     """
     Performs inference for the given output probabilities.
     Arguments:
@@ -17,7 +17,11 @@ def ctc_decode(probs, beam_size=100, blank=0):
     """
     T, S = probs.shape
     probs = np.log(probs)
+    # Elements in the beam are (prefix, (p_blank, p_no_blank))
+    # Initialize the beam with the empty sequence, a probability of
+    # 1 for ending in blank and zero for ending in non-blank (in log space).
     
+
 
 
 
@@ -31,5 +35,5 @@ if __name__ == "__main__":
     probs = np.random.rand(time, output_dim)
     probs = probs / np.sum(probs, axis=1, keepdims=True)
 
-    labels, score = ctc_decode(probs)
+    labels, score = ctc_beam_decode(probs)
     print(f"Score {score :.3f}")
