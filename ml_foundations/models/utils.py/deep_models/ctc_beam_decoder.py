@@ -4,6 +4,10 @@ import collections
 
 NEG_INF = -float("-inf")
 
+def make_new_beam():
+    fn = lambda : (NEG_INF, NEG_INF)
+    return collections.defaultdict(fn)
+
 def ctc_beam_decode(probs, beam_size=100, blank=0):
     """
     Performs inference for the given output probabilities.
@@ -21,7 +25,12 @@ def ctc_beam_decode(probs, beam_size=100, blank=0):
     # Initialize the beam with the empty sequence, a probability of
     # 1 for ending in blank and zero for ending in non-blank (in log space).
     beam = [(tuple(), (0.0, NEG_INF))]
-    
+
+    for t in range(T): # loop over time
+        # A default dictionary to store the next step candidates.
+        next_beam = make_new_beam()
+
+
     
 
 
