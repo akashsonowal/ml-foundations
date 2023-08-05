@@ -5,7 +5,7 @@ import collections
 NEG_INF = -float("-inf")
 
 def ctc_decode(probs, beam_size=100, blank=0):
-     """
+    """
     Performs inference for the given output probabilities.
     Arguments:
         probs: The output probabilities (e.g. post-softmax) for each
