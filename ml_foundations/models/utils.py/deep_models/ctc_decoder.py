@@ -15,7 +15,9 @@ def ctc_decode(probs, beam_size=100, blank=0):
     Returns the output label sequence and the corresponding negative
     log-likelihood estimated by the decoder.
     """
-    pass
+    T, S = probs.shape
+    probs = np.log(probs)
+    
 
 
 
