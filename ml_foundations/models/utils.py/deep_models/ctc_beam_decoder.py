@@ -8,6 +8,12 @@ def make_new_beam():
     fn = lambda : (NEG_INF, NEG_INF)
     return collections.defaultdict(fn)
 
+def logsumexp(*args):
+    """
+    Stable log sum exp.
+    """
+    
+
 def ctc_beam_decode(probs, beam_size=100, blank=0):
     """
     Performs inference for the given output probabilities.
@@ -40,7 +46,7 @@ def ctc_beam_decode(probs, beam_size=100, blank=0):
                 # Only the probability of ending in blank gets updated.
                 if s == blank:
                     n_p_b, n_p_nb = next_beam[prefix]
-                    
+
 
 
 
