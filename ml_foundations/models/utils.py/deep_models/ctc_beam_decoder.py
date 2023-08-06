@@ -55,16 +55,36 @@ def ctc_beam_decode(probs, beam_size=100, blank=0):
                     next_beam[prefix] = n_p_b, n_p_nb
                     continue
                 
+                # Extend the prefix by the new character s and add it to
+                # the beam. Only the probability of not ending in blank
+                # gets updated.
+                end_t = prefix[-1] if prefix else None
+                n_prefix = prefix + (s,)
+                n_p_b, n_p_nb = next_beam[n_prefix]
+                if s != end_t:
+                    n_p_nb = logsumexp(n_p_nb, p_b + p, p_nb + p)
+                else:
+                    # We don't include the previous probability of not ending
+                    # in blank (p_nb) if s is repeated at the end. The CTC
+                    # algorithm merges characters not separated by a blank.
+                    n_p_nb = logsumexp(n_p_nb, p_b + p)
+                
+                # *NB* this would be a good place to include an LM score.
+                next_beam[n_prefix] = (n_p_b, n_p_nb)
 
-
-
-
-
-    
-
-
-
-
+                # If s is repeated at the end we also update the unchanged
+                # prefix. This is the merging case. 
+                if s == end_t:
+                    n_p_b, n_p_nb = next_beam[prefix]
+                    n_p_nb = logsumexp(n_p_nb, p_nb + p)
+                    next_beam[prefix] = (n_p_b, n_p_nb)
+                
+        # Sort and trim the beam before moving on to the next time-step.
+        beam = sorted(next_beam.items(), key=lambda x: logsumexp(*x[1]), reverse=True)
+        beam = beam[:beam_size]
+            
+    best = beam[0]
+    return best[0], -logsumexp(*best[1])
 
 if __name__ == "__main__":
     np.random.seed(3)
