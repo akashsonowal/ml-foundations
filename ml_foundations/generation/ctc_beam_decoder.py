@@ -3,7 +3,7 @@ import math
 import collections
 
 #  instead of keeping a list of alignments in the beam, we store the output prefixes after collapsing repeats and removing 
-# ϵ characters
+# ϵ characters. At each step of the search we accumulate scores for a given prefix based on all the alignments which map to it
 
 NEG_INF = -float("-inf")
 
