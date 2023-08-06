@@ -15,7 +15,8 @@ def logsumexp(*args):
     if all(a == NEG_INF for a in args):
         return NEG_INF
     a_max = max(args)
-
+    lsp = math.log(sum(math.exp(a - a_max) for a in args))
+    return a_max + lsp
 
 
 def ctc_beam_decode(probs, beam_size=100, blank=0):
@@ -50,6 +51,10 @@ def ctc_beam_decode(probs, beam_size=100, blank=0):
                 # Only the probability of ending in blank gets updated.
                 if s == blank:
                     n_p_b, n_p_nb = next_beam[prefix]
+                    n_p_b = logsumexp(n_p_b, p_b + p, p_nb + p)
+                    next_beam[prefix] = n_p_b, n_p_nb
+                    continue
+                
 
 
 
