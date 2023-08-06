@@ -2,6 +2,9 @@ import numpy as np
 import math
 import collections
 
+#  instead of keeping a list of alignments in the beam, we store the output prefixes after collapsing repeats and removing 
+# ϵ characters
+
 NEG_INF = -float("-inf")
 
 
