@@ -3,9 +3,9 @@ import math
 import collections
 
 # instead of keeping a list of alignments in the beam, we store the output prefixes after collapsing repeats and removing
-# ϵ characters. At each step of the search we accumulate scores for a given prefix based on all the alignments which map to it
+# blank characters. At each step of the search we accumulate scores for a given prefix based on all the alignments which map to it
 
-NEG_INF = -float("-inf")
+NEG_INF = - float("inf")
 
 
 def make_new_beam():
@@ -53,9 +53,7 @@ def ctc_beam_decode(probs, beam_size=5, blank=0):
             for prefix, (p_b, p_nb) in beams:  # loop over beams at previous time step
                 # If we propose a blank the prefix doesn't change. Only the probability of ending in blank gets updated.
                 if s == blank:
-                    n_p_b, n_p_nb = next_beams[
-                        prefix
-                    ]  # n_p_b is new p_b and n_p_nb is new p_nb
+                    n_p_b, n_p_nb = next_beams[prefix]  # n_p_b is new p_b and n_p_nb is new p_nb
                     n_p_b = logsumexp(n_p_b, p_b + p, p_nb + p)
                     next_beams[prefix] = n_p_b, n_p_nb
                     continue
