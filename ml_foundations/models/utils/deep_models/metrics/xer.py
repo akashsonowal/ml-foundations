@@ -1,7 +1,9 @@
 import numpy as np 
 
-def levenstein_distance(ref, hyp):
-    pass 
+def levenstein_distance(ref, hyp): # character matching b/ew words
+    m, n = len(ref), len(hyp)
+    if ref == hyp:
+        return 0
 
 
 if __name__ == "__main__":
