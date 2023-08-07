@@ -1,5 +1,4 @@
-import numpy as np 
-from numpy import argmax 
+import numpy as np
 
 def ctc_greedy_decoder(probs):
     T, S = probs.shape
