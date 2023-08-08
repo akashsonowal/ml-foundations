@@ -11,3 +11,11 @@ def wer(source_seq, target_seq, ignore_case=True):
     edit_distance = levenstein_distance(source_words, target_words) # edit distance sums over every word pair
     return float(edit_distance) / len(source_words)
 
+def cer(source_seq, target_seq, ignore_case=True):
+    if ignore_case:
+        source_seq = source_seq.lower()
+        target_seq = target_seq.lower()
+    
+    edit_distance = levenstein_distance(source_seq, target_seq) # entire sequence is considered as a word
+    return float(edit_distance) / len(source_seq)
+
