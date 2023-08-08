@@ -19,3 +19,8 @@ def cer(source_seq, target_seq, ignore_case=True):
     edit_distance = levenstein_distance(source_seq, target_seq) # entire sequence is considered as a word
     return float(edit_distance) / len(source_seq)
 
+if __name__ == "__main__":
+    seq_1 = "Hi I am Akash Sonowal"
+    seq_2 = "Ho I am Aakash Sonowall"
+
+    print(f"WER and CER of {seq_1} and {seq_2} is {wer(seq_1, seq_2)} and {cer(seq_1, seq_2)}")
