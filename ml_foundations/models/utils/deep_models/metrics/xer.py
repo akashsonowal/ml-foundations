@@ -3,7 +3,7 @@ import numpy as np
 def levenstein_distance(source, target): # character matching b/ew words
     n, m = len(source), len(target)
 
-    distance = np.zeros((n + 1, m + 1), dtype=int32)
+    distance = np.zeros((n + 1, m + 1), dtype=np.int32)
 
     # when n = 0 i.e., source is empty
     for j in range(m + 1):
