@@ -26,9 +26,10 @@ def levenstein_distance(source, target): # character matching b/ew words
     return distance[n][m]
 
 if __name__ == "__main__":
-    a = ['Mavs', 'Spurs', 'Lakers', 'Cavs']
-    b = ['Rockets', 'Pacers', 'Warriors', 'Celtics']
+    A = ["helo", "algorithm", "kitten", "gate"]
+    B = ["hello", "rhythm", "sitting", "goat"]
 
-    for i, k in zip(a, b):
-        print(levenstein_distance(i, k))
+    for i in range(len(A)):
+        print("Levenshtein Distance between {} and {} = {}".format(A[i], B[i], levenstein_distance(A[i], B[i])))
+
 
