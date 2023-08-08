@@ -8,6 +8,6 @@ def wer(source_seq, target_seq, ignore_case=True):
     source_words = source_seq.split(" ")
     target_words = target_seq.split(" ")
 
-    edit_distance = levenstein_distance(source_words, target_words) # edit distance will sum over every word pair
+    edit_distance = levenstein_distance(source_words, target_words) # edit distance sums over every word pair
     return float(edit_distance) / len(source_words)
 
