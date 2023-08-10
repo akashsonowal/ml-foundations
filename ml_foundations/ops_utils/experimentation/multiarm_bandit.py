@@ -42,4 +42,4 @@ def thompson_sampling(dataset):
 
 if __name__ == "__main__":
     dataset = pd.read_csv('Ads_CTR_Optimisation.csv')
-    ucb(dataset)
+    thompson_sampling(dataset)
