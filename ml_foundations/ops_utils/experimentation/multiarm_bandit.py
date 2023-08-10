@@ -39,3 +39,7 @@ def thompson_sampling(dataset):
     plt.xlabel("Ads")
     plt.ylabel("Number of times each ad was selected")
     plt.show()
+
+if __name__ == "__main__":
+    dataset = pd.read_csv('Ads_CTR_Optimisation.csv')
+    ucb(dataset)
