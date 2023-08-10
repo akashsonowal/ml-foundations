@@ -34,7 +34,9 @@ def thompson_sampling(dataset):
         
         total_reward += reward 
 
-        
+    plt.hist(ads_selected)
+    
+
 
 
 
