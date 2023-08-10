@@ -30,13 +30,12 @@ def thompson_sampling(dataset):
         if reward == 1:
             numbers_of_rewards_1[ad] += 1
         else:
-            numbers_of_rewards_0[ad] ++ 1
+            numbers_of_rewards_0[ad] += 1
         
         total_reward += reward 
 
     plt.hist(ads_selected)
-    
-
-
-
-
+    plt.title("Histogram of ads selection")
+    plt.xlabel("Ads")
+    plt.ylabel("Number of times each ad was selected")
+    plt.show()
