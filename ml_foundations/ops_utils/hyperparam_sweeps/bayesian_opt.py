@@ -25,15 +25,17 @@ def objective(x, noise=0.1):
 	return (x**2 * math.sin(5 * math.pi * x)**6.0) + noise # 5 modal distribution
 
 # surrogate or approximation for the objective function
+# we choose candidates from this surrogate function to tested on objective function
 def surrogate(model, X):
 	# catch any warning generated when making a prediction
 	with catch_warnings():
 		# ignore generated warnings
 		simplefilter("ignore")
-		return model.predict(X, return_std=True)
+		return model.predict(X, return_std=True) # a probabilistic model (bayes posterior)
+
 
 # probability of improvement acquisition function
-def acquisition(X, Xsamples, model):
+def acquisition(X, Xsamples, model): # using surrogate 
 	# calculate the best surrogate score found so far
 	yhat, _ = surrogate(model, X)
 	best = max(yhat)
@@ -76,30 +78,33 @@ if __name__ == "__main__":
 	# reshape into rows and cols
 	X = X.reshape(len(X), 1)
 	y = y.reshape(len(y), 1)
-	
-# define the model
-model = GaussianProcessRegressor()
-# fit the model
-model.fit(X, y)
-# plot before hand
-plot(X, y, model)
-# perform the optimization process
-for i in range(100):
-	# select the next point to sample
-	x = opt_acquisition(X, y, model)
-	# sample the point
-	actual = objective(x)
-	# summarize the finding
-	est, _ = surrogate(model, [[x]])
-	print('>x=%.3f, f()=%3f, actual=%.3f' % (x, est, actual))
-	# add the data to the dataset
-	X = vstack((X, [[x]]))
-	y = vstack((y, [[actual]]))
-	# update the model
+
+	# define the model
+	model = GaussianProcessRegressor()
+
+	# fit the model
 	model.fit(X, y)
 
-# plot all samples and the final surrogate function
-plot(X, y, model)
-# best result
-ix = argmax(y)
-print('Best Result: x=%.3f, y=%.3f' % (X[ix], y[ix]))
+	# plot before hand
+	plot(X, y, model)
+
+	# perform the optimization process
+	for i in range(100):
+		# select the next point to sample
+		x = opt_acquisition(X, y, model)
+		# sample the point
+		actual = objective(x)
+		# summarize the finding
+		est, _ = surrogate(model, [[x]])
+		print('>x=%.3f, f()=%3f, actual=%.3f' % (x, est, actual))
+		# add the data to the dataset
+		X = vstack((X, [[x]]))
+		y = vstack((y, [[actual]]))
+		# update the model
+		model.fit(X, y)
+
+	# plot all samples and the final surrogate function
+	plot(X, y, model)
+	# best result
+	ix = argmax(y)
+	print('Best Result: x=%.3f, y=%.3f' % (X[ix], y[ix]))
