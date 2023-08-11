@@ -63,6 +63,9 @@ def plot(X, y, model):
 	# show the plot
 	pyplot.show()
 
+if __name__ == "__main__":
+	
+
 # sample the domain sparsely with noise
 X = random(100)
 y = asarray([objective(x) for x in X])
