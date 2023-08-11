@@ -3,6 +3,10 @@
 # example of bayesian optimization for a 1d function from scratch
 from math import sin
 from math import pi
+
+import math 
+import numpy as np 
+
 from numpy import arange
 from numpy import vstack
 from numpy import argmax
@@ -17,8 +21,8 @@ from matplotlib import pyplot
 
 # objective function
 def objective(x, noise=0.1):
-	noise = normal(loc=0, scale=noise)
-	return (x**2 * sin(5 * pi * x)**6.0) + noise # 5 modal distribution
+	noise = np.random.normal(loc=0, scale=noise)
+	return (x**2 * math.sin(5 * math.pi * x)**6.0) + noise # 5 modal distribution
 
 # surrogate or approximation for the objective function
 def surrogate(model, X):
