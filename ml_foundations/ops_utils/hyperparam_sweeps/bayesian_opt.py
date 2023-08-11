@@ -69,13 +69,14 @@ def plot(X, y, model):
 
 if __name__ == "__main__":
 
+	# sample the domain sparsely with noise
+	X = random(100)
+	y = asarray([objective(x) for x in X])
 
-# sample the domain sparsely with noise
-X = random(100)
-y = asarray([objective(x) for x in X])
-# reshape into rows and cols
-X = X.reshape(len(X), 1)
-y = y.reshape(len(y), 1)
+	# reshape into rows and cols
+	X = X.reshape(len(X), 1)
+	y = y.reshape(len(y), 1)
+	
 # define the model
 model = GaussianProcessRegressor()
 # fit the model
