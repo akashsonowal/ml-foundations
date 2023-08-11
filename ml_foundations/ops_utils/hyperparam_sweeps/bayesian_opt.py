@@ -18,7 +18,7 @@ from matplotlib import pyplot
 # objective function
 def objective(x, noise=0.1):
 	noise = normal(loc=0, scale=noise)
-	return (x**2 * sin(5 * pi * x)**6.0) + noise
+	return (x**2 * sin(5 * pi * x)**6.0) + noise # 5 modal distribution
 
 # surrogate or approximation for the objective function
 def surrogate(model, X):
@@ -64,7 +64,7 @@ def plot(X, y, model):
 	pyplot.show()
 
 if __name__ == "__main__":
-	
+
 
 # sample the domain sparsely with noise
 X = random(100)
