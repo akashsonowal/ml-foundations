@@ -72,4 +72,4 @@ matrix factor model takes the user items in batch and geting the embedding for i
 
 ## Deep Factorization Machines
 
- 
+https://colab.research.google.com/github/google/eng-edu/blob/main/ml/recommendation-systems/recommendation-systems.ipynb?utm_source=ss-recommendation-systems&utm_campaign=colab-external&utm_medium=referral&utm_content=recommendation-systems#scrollTo=PqDjkdlFo4t0
